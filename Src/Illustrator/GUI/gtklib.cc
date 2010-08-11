@@ -19,12 +19,14 @@ Contributor(s): Juha Nieminen.
 // Juha Nieminen
 
 static const char * const ModuleVersion=
-  "Module version: $Id: gtklib.cc 1.8 Fri, 27 Feb 2004 16:36:58 +0200 warp $";
+  "Module version: $Id: gtklib.cc 1.9 Wed, 20 Dec 2006 22:10:46 +0200 hevi $";
 // 
 // GraphicLibrary:n GTK-toteutus.
 //
 
 // $Log:$
+
+#define GTK_ENABLE_BROKEN 1
 
 #include "gtklib.hh"
 #include "constants.hh"

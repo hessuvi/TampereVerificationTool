@@ -18,7 +18,7 @@ Contributor(s): Juha Nieminen.
 // FILE_DES: graflib.hh: Grafiikka/piirtoalusta/rajapinta
 // Juha Nieminen
 
-// $Id: graflib.hh 1.6 Fri, 27 Feb 2004 16:36:58 +0200 warp $
+// $Id: graflib.hh 1.7 Wed, 20 Dec 2006 22:10:46 +0200 hevi $
 // 
 // Kaikkien piirtoalustojen yhteisen rajapinnan kuvaus
 // GraphicLibrary:
@@ -76,6 +76,7 @@ public:
 
     class Callback
     { public:
+      virtual ~Callback() {};
         virtual void DrawingFunction(DWindow) = 0;
         virtual void HandleKeyPress(char key) = 0;
         virtual void HandleButtonClick(unsigned buttonNumber) = 0;

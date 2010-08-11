@@ -8,8 +8,8 @@
 
 CC=$(CXX)
 
-CFLAGS=$(CXXFLAGS) `gtk-config --cflags`
-LFLAGS=`gtk-config --libs` -lm
+CFLAGS=$(CXXFLAGS) `pkg-config --cflags gtk+-2.0`
+LFLAGS=`pkg-config --libs gtk+-2.0` -lm
 
 GLDIR=.
 OBJS=main.o lts_viewer.o gtklib.o graflib.o lts_draw_reader.o
