@@ -1,33 +1,35 @@
+
+CP="cp"
+CPFLAGS="-pu"
+
 all:
 	$(MAKE) -C Src
-	cp Src/InputLanguage/InputLanguage bin/tvt.compiler
-	cp Src/parallel/parallel bin/tvt.parallel
-	cp Src/createrules/createrules bin/tvt.createrules
-	cp Src/extendedrules/extendedrules bin/tvt.extendedrules
-	cp Src/detlsts/detag bin/tvt.detag
-	cp Src/lsts2ag/lsts2ag bin/tvt.lsts2ag
-	cp Src/ag2lsts/ag2lsts bin/tvt.ag2lsts
-	cp Src/ag2tp/ag2tp bin/tvt.ag2tp
-	cp Src/SBreduction/SBreduction bin/tvt.SBreduction
-	cp Src/TauReduction/TauReduction bin/tvt.taureduction
-	cp Src/BBreduction/BBreduction bin/tvt.BBreduction
-	cp Src/SBcompare/SBcompare bin/tvt.SBcompare
-	cp Src/ReduceKsnp/ReduceKsnp bin/tvt.ReduceKsnp
-	cp Src/simulate/simulate bin/tvt.simulate
-	cp Src/unfold/unfold bin/tvt.unfold
-	cp Src/testerrules/testerrules bin/tvt.testerrules
-	strip bin/*
-	cp Src/ag2tp/testall bin/tvt.testall # Cannot be converted to Win.
-	cp Src/Illustrator/tvt.illux bin/tvt.illux
-	cp Src/Scripts/tvt.CFFD_normalize bin/
-	cp Src/Scripts/tvt.CFFDcompare bin/
-	cp Src/Scripts/tvt.detlsts bin/
-	chmod u+x bin/tvt.*
-
-#	
-#	
-#	cp Src/Illustrator/illus bin/tvt.illus
-#	cp Src/Illustrator/GUI/main bin/tvt.illux_view
+	mkdir -p -m 2755 bin
+	$(CP) $(CPFLAGS) Src/InputLanguage/InputLanguage bin/tvt.compiler
+	$(CP) $(CPFLAGS) Src/parallel/parallel bin/tvt.parallel
+	$(CP) $(CPFLAGS) Src/createrules/createrules bin/tvt.createrules
+	$(CP) $(CPFLAGS) Src/extendedrules/extendedrules bin/tvt.extendedrules
+	$(CP) $(CPFLAGS) Src/detlsts/detag bin/tvt.detag
+	$(CP) $(CPFLAGS) Src/lsts2ag/lsts2ag bin/tvt.lsts2ag
+	$(CP) $(CPFLAGS) Src/ag2lsts/ag2lsts bin/tvt.ag2lsts
+	$(CP) $(CPFLAGS) Src/ag2tp/ag2tp bin/tvt.ag2tp
+	$(CP) $(CPFLAGS) Src/SBreduction/SBreduction bin/tvt.SBreduction
+	$(CP) $(CPFLAGS) Src/TauReduction/TauReduction bin/tvt.taureduction
+	$(CP) $(CPFLAGS) Src/BBreduction/BBreduction bin/tvt.BBreduction
+	$(CP) $(CPFLAGS) Src/SBcompare/SBcompare bin/tvt.SBcompare
+	$(CP) $(CPFLAGS) Src/ReduceKsnp/ReduceKsnp bin/tvt.ReduceKsnp
+	$(CP) $(CPFLAGS) Src/simulate/simulate bin/tvt.simulate
+	$(CP) $(CPFLAGS) Src/unfold/unfold bin/tvt.unfold
+	$(CP) $(CPFLAGS) Src/testerrules/testerrules bin/tvt.testerrules
+	$(CP) $(CPFLAGS) Src/Illustrator/illus bin/tvt.illus
+	$(CP) $(CPFLAGS) Src/Illustrator/GUI/main bin/tvt.illux_view
+#	strip bin/*
+	$(CP) $(CPFLAGS) Src/ag2tp/testall bin/tvt.testall # Cannot be converted to Win.
+	$(CP) $(CPFLAGS) Src/Illustrator/tvt.illux bin/tvt.illux
+	$(CP) $(CPFLAGS) Src/Scripts/tvt.CFFD_normalize bin/
+	$(CP) $(CPFLAGS) Src/Scripts/tvt.CFFDcompare bin/
+	$(CP) $(CPFLAGS) Src/Scripts/tvt.detlsts bin/
+#	chmod u+x bin/tvt.*
 
 
 windows:
