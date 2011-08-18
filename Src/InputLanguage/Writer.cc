@@ -1,3 +1,4 @@
+
 /*
 The contents of this file are subject to the NOKOS License Version 1.0
 (the "License"); you may not use this file except in compliance with the
@@ -35,7 +36,7 @@ Writer::~Writer()
     {
       delete transitions; transitions = NULL;
     }
-  if (stateProps) 
+  if (stateProps)
     {
       delete stateProps; stateProps = NULL;
     }
@@ -89,30 +90,30 @@ void Writer::calculateGatenames()
 	      if (debug) cout << "Adding an implicit final gate: " << *gate << endl;
 	      finalGates.push_back(*gate);
 	    }
-      
+
 	  // for each legal combination
-	  for (vector<vector<EnumType> >::iterator param = legalParams.begin(); 
-	       param != legalParams.end(); 
+	  for (vector<vector<EnumType> >::iterator param = legalParams.begin();
+	       param != legalParams.end();
 	       ++param)
 	    {
 	      // in the first phase, there's only the unparameterized version of the gate
 	      GateList tempGates, tempGates2;
 	      tempGates.push_back(*gate);
-	      
+
 	      unsigned position = 0;
 	      // for each variable of this combination
-	      for (vector<EnumType>::iterator type = (*param).begin(); 
-		   type != (*param).end(); 
+	      for (vector<EnumType>::iterator type = (*param).begin();
+		   type != (*param).end();
 		   ++type)
 		{
 		  // get the values of this enum type
 		  EnumDefinition def = myProcess->getEnumDefinition(*type);
-		  
+
 		  // for each value of this variable
 		  for (EnumDefinition::iterator value = def.begin(); value != def.end(); ++value)
 		    {
 		      // for each gate in the temp list
-		      for (GateList::iterator tempGate = tempGates.begin(); 
+		      for (GateList::iterator tempGate = tempGates.begin();
 			   tempGate != tempGates.end();
 			   ++tempGate)
 			{
@@ -120,16 +121,16 @@ void Writer::calculateGatenames()
 			  tempGates2.push_back(Utils::addVarToGate(*tempGate, *value, position));
 			}
 		    }
-		  
+
 		  // now move the modified temp list to the original for the next variable to be
 		  // replaced by it's values
 		  tempGates.clear();
 		  tempGates = tempGates2;
 		  tempGates2.clear();
-		  
+
 		  ++position;
 		}
-	      
+
 	      // the combination of parameters is complete. Now the temp gates are final
 	      // and we are ready for the next combination
 	      for (GateList::iterator i = tempGates.begin(); i != tempGates.end(); ++i)
@@ -208,7 +209,7 @@ void Writer::calculateVariables()
   initState->setVariables(vars);
   setBeenBit(initState);
   q.push_back(initState);
-  
+
   do
     {
       State* current = q[q.size()-1];
@@ -222,7 +223,7 @@ void Writer::calculateVariables()
 	  current->getVariables(vars);
 
 	  getCreatedVariables(vars, *tr);
-	  
+
 	  if (!beenHere( (*tr)->toState ) )
 	    {
 	      setBeenBit( (*tr)->toState );
@@ -238,7 +239,7 @@ void Writer::calculateVariables()
 		{
 		  while (vars.size() > 0)
 		    {
-		      if (targetVars.end() != 
+		      if (targetVars.end() !=
 			  find(targetVars.begin(), targetVars.end(), *(vars.begin()) )
 			 )
 			{
@@ -308,12 +309,12 @@ void Writer::getCreatedVariables(VarList& list, Transition* tr)
     }
 
   for (unsigned i=0;i<tr->exclamations.size();++i)
-    { 
-      createVariablesRecursion(list, tr->exclamations[i]); 
+    {
+      createVariablesRecursion(list, tr->exclamations[i]);
     }
 
   for (unsigned j=0;j<tr->questions.size();++j)
-    { 
+    {
       if (list.end() == find(list.begin(), list.end(), tr->questions[j]))
 	{
 	  list.push_back(tr->questions[j]);
@@ -364,12 +365,12 @@ void Writer::splitStates()
 	  // get the current final states, which will all need to be split
 	  FinalStateList finSt;
 	  (*state)->getFinalStates(finSt);
-	  for (FinalStateList::iterator finals = finSt.begin(); 
-	       finals != finSt.end(); 
+	  for (FinalStateList::iterator finals = finSt.begin();
+	       finals != finSt.end();
 	       ++finals)
 	    {
 	      // see what values this variable has
-	      EnumDefinition def = 
+	      EnumDefinition def =
 		myProcess->getEnumDefinition(myProcess->getVariableType(*variable));
 
 	      // create a new final state for each value
@@ -382,7 +383,7 @@ void Writer::splitStates()
 
 		  // enable this variable and give it the correct value
 		  newState->
-		    enableVariable(*variable, 
+		    enableVariable(*variable,
 				   myProcess->getEnumValue(myProcess->getVariableType(*variable),
 							   *value));
 
@@ -392,21 +393,21 @@ void Writer::splitStates()
 		  tempStates.push_back(newState);
 		}
 	    }
-	     
+
 	  // if we created any new final states, move them from the temporary store to the
 	  // state's list of final states
 	  if (tempStates.size() > 0)
 	    {
 	      // the states that existed before the split are now outdated
 	      (*state)->removeFinalStates();
-	      
-	      for (FinalStateList::iterator finals = tempStates.begin(); 
-		   finals != tempStates.end(); 
+
+	      for (FinalStateList::iterator finals = tempStates.begin();
+		   finals != tempStates.end();
 		   ++finals)
 		{
 		  (*state)->addFinalState(*finals);
 		}
-	      
+
 	      tempStates.clear();
 	    }
 	}
@@ -419,8 +420,8 @@ void Writer::splitStates()
     {
       FinalStateList finalList;
       (*st)->getFinalStates(finalList);
-      for (FinalStateList::iterator final = finalList.begin(); 
-	   final != finalList.end(); 
+      for (FinalStateList::iterator final = finalList.begin();
+	   final != finalList.end();
 	   ++final)
 	{
 	  if (debug) cout << "Adding a final state: " << (*final)->getName() << endl;
@@ -429,8 +430,8 @@ void Writer::splitStates()
     }
 }
 
-bool Writer::checkConditions(Transition* tr, 
-			     FinalState* from, 
+bool Writer::checkConditions(Transition* tr,
+			     FinalState* from,
 			     FinalState* to,
 			     unsigned gateNumber)
 {
@@ -480,7 +481,7 @@ bool Writer::checkConditions(Transition* tr,
     {
       tr->handled.push_back(*del);
     }
-  
+
   // now see that the values of the other variables stay the same,
   // unless they have already been handled
   VarList fromVars, toVars;
@@ -489,7 +490,7 @@ bool Writer::checkConditions(Transition* tr,
 
   for (VarList::iterator currVar = fromVars.begin(); currVar != fromVars.end(); ++currVar)
     {
-      if (tr->handled.end() == find(tr->handled.begin(), 
+      if (tr->handled.end() == find(tr->handled.begin(),
 					 tr->handled.end(),
 					 *currVar))
 	{
@@ -525,8 +526,8 @@ bool Writer::checkPrecondition(Transition* tr, FinalState* from)
   return true;
 }
 
-// checks those assignments that are really just an assignment, 
-// that is, x' = <expression>, where x is any variable and 
+// checks those assignments that are really just an assignment,
+// that is, x' = <expression>, where x is any variable and
 // <expression> has no ':d variables. Those can be evaluated
 // to x' = <constant> without knowing the toState
 void Writer::evaluateRealAssignments(Transition* tr, FinalState* from)
@@ -540,7 +541,7 @@ void Writer::evaluateRealAssignments(Transition* tr, FinalState* from)
       tr->assignLeftSides.erase(alsit);
       alsit = tr->assignLeftSides.begin();
     }
-  
+
   vector<unsigned*>::iterator arsit = tr->assignRightSides.begin();
   while (arsit != tr->assignRightSides.end())
     {
@@ -553,7 +554,7 @@ void Writer::evaluateRealAssignments(Transition* tr, FinalState* from)
     {
       VarName* ls = NULL;
       unsigned* rs = NULL;
-      
+
       (*a)->isRealAssignment(from, myProcess, ls, rs);
       tr->assignLeftSides.push_back(ls);
       tr->assignRightSides.push_back(rs);
@@ -566,8 +567,8 @@ void Writer::evaluateRealAssignments(Transition* tr, FinalState* from)
     }
 }
 
-bool Writer::createTransition(FinalState* fromfstate, 
-			      FinalState* tofstate, 
+bool Writer::createTransition(FinalState* fromfstate,
+			      FinalState* tofstate,
 			      Transition* trans,
 			      GateName* gate)
 {
@@ -578,11 +579,11 @@ bool Writer::createTransition(FinalState* fromfstate,
   newTrans->gate = *gate;
 
   // add the parameter values to the names of the gates
-  vector<unsigned>::iterator exclpos = 
+  vector<unsigned>::iterator exclpos =
     trans->exclamationPositions.begin();
   vector<Expression*> excs = trans->exclamations;
-  for (vector<Expression*>::iterator i = excs.begin(); 
-       i != excs.end(); 
+  for (vector<Expression*>::iterator i = excs.begin();
+       i != excs.end();
        ++i)
     {
       ExpressionValue e = (*i)->
@@ -596,9 +597,9 @@ bool Writer::createTransition(FinalState* fromfstate,
       EnumValue val = myProcess->
 	getEnumValueName(e.enumType, e.enumValue);
 
-      newTrans->gate = 
-	Utils::addVarToGate(newTrans->gate, 
-			    val, 
+      newTrans->gate =
+	Utils::addVarToGate(newTrans->gate,
+			    val,
 			    *exclpos);
       exclpos++;
     }
@@ -658,7 +659,7 @@ void Writer::addTransitions()
       if (!beenHere(*fromfstate))
 	{
 	  setBeenBit(*fromfstate);
-	  
+
 	  if (debug) cout << "FromState: " << (*fromfstate)->getName() << endl;
 
 	  TransitionList trList;
@@ -673,7 +674,7 @@ void Writer::addTransitions()
 		  evaluateRealAssignments(*trans, *fromfstate);
 
 		  (*trans)->toState->getFinalStates(fsList2);
-		  if (debug) cout << "The target state has " << fsList2.size() 
+		  if (debug) cout << "The target state has " << fsList2.size()
 				  << " final states." << endl;
 
 		  for (FinalStateList::iterator tofstate = fsList2.begin();
@@ -685,7 +686,7 @@ void Writer::addTransitions()
 		      // we might have multiple gates if we had any ?'s
 		      GateList gates = (*trans)->gates;
 		      unsigned gateNumber = 0;
-		      if (debug) cout << "The transition has " << gates.size() 
+		      if (debug) cout << "The transition has " << gates.size()
 				      << " gates." << endl;
 
 		      for (GateList::iterator j = gates.begin(); j != gates.end(); ++j)
@@ -694,7 +695,7 @@ void Writer::addTransitions()
 			  if ( checkConditions(*trans, *fromfstate, *tofstate, gateNumber) )
 			    {
 			      // create the transition
-			      // if it gets created, add the target state to the list of 
+			      // if it gets created, add the target state to the list of
 			      // states to handle
 			      if (debug) cout << "Creating the transition." << endl;
 
@@ -718,7 +719,7 @@ void Writer::addTransitions()
 		}
 	    }
 	}
-      if (debug) cout << "From state " << (*fromfstate)->getName() 
+      if (debug) cout << "From state " << (*fromfstate)->getName()
 		      << " handled, erasing." << endl;
       fsList.erase(fromfstate);
       fromfstate = fsList.begin();
@@ -757,8 +758,8 @@ bool Writer::checkQuestions(Transition* tr, GateName gate, FinalState* to)
     {
       if (to->hasVariable(*i))
 	{
-	  if (to->getVariableValue(*i) != 
-	      myProcess->getEnumValue(myProcess->getVariableType(*i),  
+	  if (to->getVariableValue(*i) !=
+	      myProcess->getEnumValue(myProcess->getVariableType(*i),
 				      Utils::getVarFromGate(gate, *qpos)))
 	    {
 	      return false;
@@ -933,7 +934,7 @@ void Writer::calculateStateProps()
 		{
 		  while (props.size() != 0)
 		    {
-		      if (targetProps.end() != 
+		      if (targetProps.end() !=
 			  find(targetProps.begin(), targetProps.end(), *(props.begin()) )
 			 )
 		      {
@@ -952,7 +953,7 @@ void Writer::calculateStateProps()
 	      else
 		{
 		  string errStr = "ERROR: Different paths give different enabled propositions"
-		                  " in state ";
+				  " in state ";
 		  errStr += (*tr)->toState->getName();
 		  throw ILError(errStr);
 		}
@@ -995,7 +996,7 @@ void Writer::calculateStateProps()
 	      if (*j)
 		{
 		  val = (*j)->evaluate(*fstate, NULL, myProcess);
-		} 
+		}
 
 	      if (!(*j) || (val.type == LOGICAL && val.logical == true) )
 		{
@@ -1074,12 +1075,12 @@ void Writer::findReachableStates()
 	{
 	  setBeenBit(curr);
 	  curr->setReachable();
-        
+
 	  FinalTransitionList list;
 	  curr->getTransitions(list);
 	  for (FinalTransitionList::iterator i = list.begin(); i != list.end(); ++i)
 	    {
-	      if (debug) cout << "Transition to " << (*i)->toState->getName() 
+	      if (debug) cout << "Transition to " << (*i)->toState->getName()
 		   << ", added to the stack" << endl;
 	      s.push_back( (*i)->toState);
 	    }
@@ -1114,13 +1115,13 @@ void Writer::convertToLSTS()
 
   if (debug) cout << "Calculating variables" << endl;
   calculateVariables();
-  
+
   if (debug) cout << "Splitting states according to the variables." << endl;
   splitStates();
 
   if (debug) cout << "Calculating state props" << endl;
   calculateStateProps();
-  
+
   if (debug) cout << "Finding init states" << endl;
   findInitStates();
 
@@ -1132,7 +1133,7 @@ void Writer::convertToLSTS()
 
   //  if (debug) cout << "Removing unused gates" << endl;
   if (!unused) markUsedGates();
-  
+
   // write the transitions to the transitioncontainer
   if (debug) cout << "Writing transitions" << endl;
 
@@ -1146,22 +1147,22 @@ void Writer::convertToLSTS()
 	{
 	  transitions->startAddingTransitionsToState(++stateCount);
 	  if (debug) cout << "Adding transitions from state number " << stateCount << endl;
-      
+
 	  FinalTransitionList finalTrans;
 	  (*i)->getTransitions(finalTrans);
 
-	  for (FinalTransitionList::iterator j = finalTrans.begin(); 
-	       j != finalTrans.end(); 
+	  for (FinalTransitionList::iterator j = finalTrans.begin();
+	       j != finalTrans.end();
 	       ++j)
 	    {
 	      if (unused)
 		{
 		  if (debug) cout << "Adding transition from " << (*i)->getName() << " to "
-				  << (*j)->toState->getName() << ", gate number " 
+				  << (*j)->toState->getName() << ", gate number "
 				  << myProcess->getGateNumber((*j)->gate) << endl;
 
 		  if (debug) cout << "Gate's name was " << (*j)->gate << endl;
-		  if (debug) cout << "Target state's number is " 
+		  if (debug) cout << "Target state's number is "
 				  << myProcess->getFinalStateNumber( (*j)->toState, true) << endl;
 
 		  transitions->
@@ -1171,12 +1172,12 @@ void Writer::convertToLSTS()
 	      else
 		{
 		  if (debug) cout << "Adding transition from " << (*i)->getName() << " to "
-				  << (*j)->toState->getName() << ", gate number " 
+				  << (*j)->toState->getName() << ", gate number "
 				  << myProcess->getUsedGateNumber((*j)->gate) << endl;
 
 		  if (debug) cout << "Gate's name was " << (*j)->gate << endl;
 
-		  if (debug) cout << "Target state's number is " 
+		  if (debug) cout << "Target state's number is "
 				  << myProcess->getFinalStateNumber( (*j)->toState, true) << endl;
 
 		  transitions->
@@ -1185,7 +1186,7 @@ void Writer::convertToLSTS()
 		}
 
 	    }
-	  
+
 	  transitions->doneAddingTransitionsToState();
 	}
     }
@@ -1196,11 +1197,11 @@ void Writer::convertToLSTS()
   myProcess->getStateProps(statePropNames, true);
 
   if (!debug) stateProps = new StatePropsContainer(statePropNames.size());
-  if (debug)  
+  if (debug)
     {
       cout << "Constructor gets: " << statePropNames.size() +
 	myProcess->getFinalStateCount() << endl;
-      stateProps = new StatePropsContainer(statePropNames.size() + 
+      stateProps = new StatePropsContainer(statePropNames.size() +
 						   myProcess->getFinalStateCount());
     }
 
@@ -1209,7 +1210,7 @@ void Writer::convertToLSTS()
     {
       string& s = stateProps->getStatePropName(myProcess->getPropNumber(*i)+1);
       s = *i;
-      if (debug) cout << "Set the name of state prop number " 
+      if (debug) cout << "Set the name of state prop number "
 		      << myProcess->getPropNumber(*i)+1
 		      << " to " << *i << endl;
     }
@@ -1225,7 +1226,7 @@ void Writer::convertToLSTS()
 	{
 	  StatePropsContainer::StatePropsPtr p = stateProps->getStateProps(++count);
 
-	  if (debug) cout << "Writing state number " << count << ": " 
+	  if (debug) cout << "Writing state number " << count << ": "
 			  << (*state)->getName() << endl;
 
 	  if (debug)
@@ -1283,6 +1284,25 @@ void Writer::convertToLSTS()
       //	}
     }
 
+  unsigned real_action_cnt = 0;
+  if( unused )
+    real_action_cnt = myProcess->getGateCount()-1;
+  else
+    real_action_cnt = myProcess->getUsedGateCount()-1;
+
+  // std::cerr << "Todellinen tapahtumien kulku " << real_action_cnt << std::endl;
+
+  for( unsigned i = 1; i<= real_action_cnt ; ++i ) {
+    if( unused ) {
+      actionStore->addAction( i, myProcess->getGateName(i) );
+    } else {
+      actionStore->addAction( i, myProcess->getUsedGateName(i) );
+    }
+  }
+
+
+
+#if 0
   if (unused)
     {
       hd->SetActionCnt(myProcess->getGateCount()-1);
@@ -1291,6 +1311,7 @@ void Writer::convertToLSTS()
     {
       hd->SetActionCnt(myProcess->getUsedGateCount()-1);
     }
+
 
   // write the action names to the action store
   actionStore->lsts_StartActionNames(*hd);
@@ -1315,6 +1336,7 @@ void Writer::convertToLSTS()
 	}
     }
   actionStore->lsts_EndActionNames();
+#endif
 
   if (debug) cout << "Conversion done." << endl;
 
@@ -1328,8 +1350,8 @@ void Writer::writeOutputFile(OutStream& output)
 
   // Write the LSTS-file using lsts-i/o-library
   // OutStream outfile(outputFilename, true);
-  olsts.WriteFile(output);  
-  
+  olsts.WriteFile(output);
+
   if (debug) cout << "Output file succesfully written." << endl;
 
   if (debug) cout << Expression::evaluations << " expressions evaluated." << endl;

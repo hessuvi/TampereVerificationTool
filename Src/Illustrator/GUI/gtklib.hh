@@ -102,6 +102,8 @@ public:
 
     void Done(void);
     void Quit();
+    void Exit();
+    int getStatus();
 
     void Redraw();
     void Redraw(DWindow);
@@ -122,6 +124,7 @@ private:
 
     GTKLibrary (const GTKLibrary&);
     GTKLibrary& operator=(const GTKLibrary&);
+    int exit_status;
 };
 
 #undef CIRC_GTKLIB_HH_

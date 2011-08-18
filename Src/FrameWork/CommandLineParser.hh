@@ -79,6 +79,7 @@ private:
     class HandlerPtrInterface
     {
      public:
+      virtual ~HandlerPtrInterface() {};
         virtual bool dispatch(CommandLineParser* t, const std::string&) = 0;
     };
 

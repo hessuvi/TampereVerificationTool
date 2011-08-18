@@ -269,7 +269,7 @@ int main(int argc, char* argv[])
         {
             cerr << "Can't open ";
             perror(argv[1]);
-            return EXIT_FAILURE;
+            return 1 ; // EXIT_FAILURE;
         }
         items.readData(ifile);
     }
@@ -308,6 +308,7 @@ int main(int argc, char* argv[])
     window.Done();
 
 // Clean
+    int status= GL->getStatus();
     delete GL;
-    return EXIT_SUCCESS;
+    return status;
 }

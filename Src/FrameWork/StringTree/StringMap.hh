@@ -17,6 +17,17 @@ Contributor(s): Timo Erkkil‰.
 #ifndef STRINGMAP_HH
 #define STRINGMAP_HH
 
+#ifndef ACTION_NAMES_AP_HH
+#define TUNNETTU
+#endif
+#ifndef ILSTS_FILE_HH
+#define TUNNETTU
+#endif
+#ifndef TUNNETTU
+#error "Miss‰ kaikkialla t‰t‰ k‰ytet‰‰n"
+#endif
+#undef TUNNETTU
+
 #include "StringSet.hh"
 
 /*

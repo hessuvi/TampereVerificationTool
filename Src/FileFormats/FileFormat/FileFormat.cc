@@ -31,6 +31,9 @@ FileFormat::FileFormat( const std::string& begin_file,
     warn_when_skipping( true ),
     ignore_duplicate_readers( false ),
 
+    stop_reading_asap( false ),
+    number_of_readers( 0 ),
+
     mainInS( 0 ), mainOutS( 0 ),
 
     from( &mainFrom ), to( &mainTo ),

@@ -22,6 +22,7 @@ Contributor(s): Juha Nieminen.
 #include <ctime>
 #include <cstdio>
 #include <cerrno>
+#include <cstring> // strerror
 
 //std::ostream* LogWrite::outputStream = &std::cerr;
 //std::string LogWrite::programName;

@@ -34,6 +34,7 @@ static const char * const ModuleVersion=
 #include <cerrno>   // errno
 #include <climits> // UCHAR_MAX
 #include <cstdio>
+#include <cstdlib> // strtol
 
 #include "ITokenStream.hh"
 
@@ -742,7 +743,7 @@ ITokenStream::readString()
                   // char. Finally that char is the ascii code of
                   // our character here:
                   string_string +=
-                      static_cast<char>(strtol(hex_string.c_str(), 0, 16));
+		    static_cast<char>(strtol(hex_string.c_str(), 0, 16));
 
               } // End of switch.
             

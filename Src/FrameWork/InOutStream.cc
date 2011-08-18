@@ -32,6 +32,7 @@ static const char * const ModuleVersion=
 #include "FileFormat/Lexical/charconv.hh"
 
 #include <cerrno>
+#include <cstring> // strerror
 #include <iostream>
 using namespace std;
 

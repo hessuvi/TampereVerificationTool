@@ -19,7 +19,7 @@ Contributor(s): Juha Nieminen.
 // Juha Nieminen
 
 static const char * const ModuleVersion=
-  "Module version: $Id: gtklib.cc 1.9 Wed, 20 Dec 2006 22:10:46 +0200 hevi $";
+  "Module version: $Id: gtklib.cc 1.8 Fri, 27 Feb 2004 16:36:58 +0200 warp $";
 // 
 // GraphicLibrary:n GTK-toteutus.
 //
@@ -560,5 +560,17 @@ void GTKLibrary::Done()
 
 void GTKLibrary::Quit()
 {
+    exit_status = 0 ; // EXIT_SUCCESS;
     gtk_main_quit();
+}
+
+void GTKLibrary::Exit()
+{
+    exit_status = 1 ; // EXIT_FAILURE;
+    gtk_main_quit();
+}
+
+int GTKLibrary::getStatus()
+{
+  return exit_status;
 }

@@ -240,7 +240,7 @@ bool TvtCLP::versionOptionHandler(const string&)
 {
     // PRCS generates the proper line:
     // $Format: "    cerr << \"$ProjectVersion$\" << endl;"$
-    cerr << "0.947" << endl;
+    cerr << "0.946" << endl;
 
     return false;
 }

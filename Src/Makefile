@@ -7,7 +7,7 @@ include .makefile_vars
 TVT_BASE = .
 
 SYSDEPS = createrules ReduceKsnp
-Graphical = Illustrator/GUI
+GRAPHICAL = Illustrator/GUI
 USUAL = lsts2ag \
 	ag2lsts \
 	ag2tp \

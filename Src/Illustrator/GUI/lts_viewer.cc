@@ -108,6 +108,7 @@ void LTS_Viewer::HandleKeyPress(char key)
     switch(key)
     {
       case 'q': GL->Quit(); break;
+      case 'x': GL->Exit(); break;
       case '1':
           zoomingFactor = 1;
           zoomX = 0; zoomY = 0;

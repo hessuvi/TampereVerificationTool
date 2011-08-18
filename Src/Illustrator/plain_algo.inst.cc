@@ -113,7 +113,7 @@ writeDrawingIntoFile
        ++tt )
     {
       piirros.TulostaTapahtuma( tt->line(),
-                                "",
+                                lts.nameOfAction(tt->action()),
                                 styles.color(tt->action()),
                                 styles.dash(tt->action())
                                 );
@@ -177,7 +177,10 @@ int main(int argc, char **argv)
     
         lts.initializeFromFile( clp.getInputStream(), clp.getCommentString() );
 
+
         IlLayoutAlgorithm(lts);
+
+
 
         IlStyles styles;
         if( clp.getFilenamesCnt() >= 2 ) {

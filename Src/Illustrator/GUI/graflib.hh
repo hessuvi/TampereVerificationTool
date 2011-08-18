@@ -18,7 +18,7 @@ Contributor(s): Juha Nieminen.
 // FILE_DES: graflib.hh: Grafiikka/piirtoalusta/rajapinta
 // Juha Nieminen
 
-// $Id: graflib.hh 1.7 Wed, 20 Dec 2006 22:10:46 +0200 hevi $
+// $Id: graflib.hh 1.6 Fri, 27 Feb 2004 16:36:58 +0200 warp $
 // 
 // Kaikkien piirtoalustojen yhteisen rajapinnan kuvaus
 // GraphicLibrary:
@@ -255,6 +255,8 @@ public:
      */
 
     virtual void Quit() = 0;
+    virtual void Exit() = 0;
+  virtual int getStatus() = 0;
     /* Kun ohjelma halutaan lopettaa */
 
     virtual ~GraphicLibrary();

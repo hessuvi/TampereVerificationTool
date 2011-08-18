@@ -126,12 +126,13 @@ Seuraava koodi on kommentoitu pois
     }
 #endif
   do {
-      lastCost = currentCost;
-      //cerr << "Kohdefunktio: " << currentCost << endl;
+    lastCost = currentCost;
+      // std::cerr << "ILLUS: " << "Kohdefunktio: " << currentCost << std::endl;
 #if 1
       
       
         double swapCost;
+	bool jatkuu = true;
         do {
           swapCost = currentCost ;
           for( IlLTS::StateIterator ii = start_I ;
@@ -157,12 +158,13 @@ Seuraava koodi on kommentoitu pois
                     }
                 }
             }
-        } while( currentCost < swapCost );
+        } while( currentCost < (swapCost-1.0e-8) );
       
 
 #endif
       // cerr << "Kohdefunktio (vaihto): " << currentCost << endl;
 #if 1
+
       
       
         double moveCost;
@@ -224,7 +226,7 @@ Seuraava koodi on kommentoitu pois
                   // -- outFromLoop;
                 }
             }
-        } while( currentCost < moveCost );
+        } while( currentCost < (moveCost-1e-8) );
       
 
 #endif
@@ -235,7 +237,7 @@ Seuraava koodi on kommentoitu pois
           cerr << "Kutistettu kohdefunktio " << currentCost << endl;
         }
 #endif
-  } while ( currentCost < lastCost );
+  } while ( currentCost < (lastCost-1e-10) );
 
   // Comment out to end of function, if arrow
   // placement function needs grid to be up to date

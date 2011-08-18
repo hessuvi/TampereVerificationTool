@@ -39,6 +39,7 @@ typedef unsigned char char_t;
 
 #define END_CHAR  16
 #define NUMBER_OF_END_CHARS  5
+#define COIL_ARRAY_SIZE 5
 
 
 class CoilArray : public iCoilArray<CharArray>
@@ -46,16 +47,20 @@ class CoilArray : public iCoilArray<CharArray>
  public:
     typedef unsigned char elem_t;
     
-    CoilArray() : iCoilArray<CharArray>(), leq_five_c( new unsigned[5] )
+    CoilArray() :
+      iCoilArray<CharArray>()
     {
-        for ( unsigned i = 0; i < 5; ++i ) { leq_five_c[i] = 0; }
+      for ( unsigned i = 0; i < COIL_ARRAY_SIZE; ++i ) {
+	leq_five_c[i] = 0;
+	}
     }
 
-    ~CoilArray() { delete[] leq_five_c; leq_five_c = 0; }
+    ~CoilArray() {
+      }
     
     inline bool isUsual( unsigned siz )
     {
-        if ( siz > 5 )
+        if ( siz > COIL_ARRAY_SIZE )
         {
             if ( elements.empty() ) { return false; }
             reset(); return true;
@@ -163,5 +168,5 @@ class CoilArray : public iCoilArray<CharArray>
 
     unsigned link_control_i;
 
-    unsigned* leq_five_c;
+    unsigned leq_five_c[COIL_ARRAY_SIZE];
 };
