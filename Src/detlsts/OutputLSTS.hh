@@ -184,8 +184,8 @@ private:
         // be numbered. Since 'next' is not needed at this stage as a
         // pointer, it's recycled as an integer state number.)
         inline void setStateNumber(unsigned number)
-        { next = StateSetPtr(number); }
-        inline unsigned getStateNumber() const { return unsigned(next); }
+        { state_number = number; }
+        inline unsigned getStateNumber() const { return state_number; }
 
         static inline const TransitionsContainer& getTransitionsContainer()
         { return sa_transitionsContainer; }
@@ -215,6 +215,7 @@ private:
 
         // Next-pointer for the hash table:
 	StateSetPtr next;
+        unsigned    state_number;
 
         static TransitionSet::iterator sa_currentInputTransition;
     };

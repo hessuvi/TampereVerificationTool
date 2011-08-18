@@ -190,14 +190,16 @@ inline OutputLSTS::StateSet::StateSet():
     a_stateNumbersAmount(0),
     a_transitions(TransitionsContainer::NULL_TRANSITIONS_HANDLE),
     a_transitionsAmount(0),
-    next(NULL_STATESETPTR)
+    next(NULL_STATESETPTR),
+    state_number(0)
 {}
 
 inline OutputLSTS::StateSet::StateSet(lsts_index_t stateNumber):
     a_stateNumbersAmount(0),
     a_transitions(TransitionsContainer::NULL_TRANSITIONS_HANDLE),
     a_transitionsAmount(0),
-    next(NULL_STATESETPTR)
+    next(NULL_STATESETPTR),
+    state_number(0)
 {
     sa_stateNumbersContainer->beginStates();
     sa_stateNumbersContainer->addStateNumber(stateNumber);
