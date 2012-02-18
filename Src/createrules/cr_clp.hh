@@ -32,28 +32,32 @@ extern bool USE_REGULAR_EXPRESSIONS;
 
 class CreateRulesCLP: public TvtCLP
 {
- public:
-    CreateRulesCLP();
+public:
+  CreateRulesCLP();
 
-    virtual void help( const std::string& program );
+  virtual void help( const std::string& program );
 
-    bool rename();
-    InStream& getRenameFile();
+  bool rename();
+  bool visible();
+
+  InStream& getRenameFile();
 
 
 
 //======================================================================
  private:
     bool renameHandler(const std::string& param);
+    bool visibleHandler(const std::string& param);
 
 #ifndef NO_REGEXP
     bool useereHandler(const std::string&);
 #endif
 
-    bool renameUsed;
-    InStream renameFile;
+  bool renameUsed;
+  bool visibleFlavor;
+  InStream renameFile;
 
-    static const char* const description;
+  static const char* const description;
 };
 
 

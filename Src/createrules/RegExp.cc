@@ -137,10 +137,12 @@ extern "C"
         }
         else return replacement;
     }
-
+}
 //-----------------------
 #else
 //-----------------------
+extern "C"
+{
 
     RegExp::RegExp(const std::string& regular_expression):
         regexp(regular_expression)
@@ -158,7 +160,7 @@ extern "C"
         return replacement;
     }
 
+}
 //-----------------------
 #endif
 //-----------------------
-}

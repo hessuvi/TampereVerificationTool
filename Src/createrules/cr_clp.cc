@@ -35,8 +35,14 @@ const char* const CreateRulesCLP::description =
 "those files). Actions with same names synchronize.";
 
 
-CreateRulesCLP::CreateRulesCLP(): TvtCLP(description), renameUsed(false)
+CreateRulesCLP::CreateRulesCLP():
+  TvtCLP(description), renameUsed(false), visibleFlavor(false)
 {
+    setOptionHandler("-visible", &CreateRulesCLP::visibleHandler, true,
+                     "Specify action visibility/renaming file. "
+                     "                  " // KLUDGE!
+                     "Write \"--help rename\" for more help.",
+                     "<file>", true);
     setOptionHandler("-rename", &CreateRulesCLP::renameHandler, true,
                      "Specify action hiding/renaming file. "
                      "                  " // KLUDGE!
@@ -52,8 +58,14 @@ CreateRulesCLP::CreateRulesCLP(): TvtCLP(description), renameUsed(false)
 
 
 bool CreateRulesCLP::rename() { return renameUsed; }
+bool CreateRulesCLP::visible() { return visibleFlavor; }
 InStream& CreateRulesCLP::getRenameFile() { return renameFile; }
 
+bool CreateRulesCLP::visibleHandler(const string& param)
+{
+  visibleFlavor = true;
+  return renameHandler(param);
+}
 
 bool CreateRulesCLP::renameHandler(const string& param)
 {

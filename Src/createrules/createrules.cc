@@ -340,6 +340,43 @@ void ReadRenameActions(InStream& renamefile,
     }
 }
 
+void InvertHideNames( vector<RegExp> &hideActions,
+		      const vector<map<string, lsts_index_t> > &actionNames,
+		      const vector<ActionRename> &renameActions )
+{
+  vector<RegExp> visibleActions;
+  visibleActions.swap(hideActions);
+  set<string> found_names;
+  typedef set<string> actNames_t;
+  typedef map<string, lsts_index_t> NameToNumb_t;
+
+  unsigned num_of_comps( actionNames.size() );
+  for( unsigned idx=0; idx < num_of_comps ; ++idx )
+    {
+      for( NameToNumb_t::const_iterator act_iter =
+	     actionNames[idx].begin();
+	   act_iter != actionNames[idx].end();
+	   ++act_iter )
+	{
+	  if( found_names.find(act_iter->first) == found_names.end() )
+	    {
+	      found_names.insert(actNames_t::value_type(act_iter->first));
+	    }
+	}
+    }
+  for( actNames_t::iterator next=found_names.begin();
+       next != found_names.end();
+       ++next )
+    {
+      if( searchMatch( *next, renameActions ) != renameActions.end() )
+	continue;
+      if( searchMatch( *next, visibleActions ) != visibleActions.end() )
+	continue;
+      // This action is not mentioned neither in rename or visible action set
+      hideActions.push_back( *next );
+    }
+}
+
 //========================================================================
 // Rules file creation
 //========================================================================
@@ -360,6 +397,9 @@ bool CreateRulesFile(CreateRulesCLP& clp)
         is.SetNoReaderAction(iLSTS_File::IGNORE);
         is.ReadFile();
     }
+
+    if( clp.visible() )
+      InvertHideNames(hideActions, actionNames, renameActions);
 
     WriteRules(clp, actionNames, hideActions, renameActions);
 
