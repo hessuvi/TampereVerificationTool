@@ -1,3 +1,19 @@
+Tampere Verification Tool
+=========================
+
+  Introduction
+  ------------
+
+  Home page for Tampere Verification Tool (TVT) is
+  http://www.cs.tut.fi/ohj/VARG/TVT.
+
+  Documentation is not included in this repository, but can be found
+  online: http://www.cs.tut.fi/ohj/VARG/TVT/#E
+
+  Please note: The significant part of TVT is published under NOKOS
+  (http://opensource.org/licenses/nokia.html) license.
+
+
   Compiling the TVT version 3.1.1
   -------------------------------
 
@@ -6,18 +22,21 @@
   1) GNU make: the TVT Makefile system is built relying on GNU make
      and won't propably work with other versions of make.
 
-  2) gtk: the graph viewer program tvt.illux requires this library.
-     An easy way to test whether gtk is installed in your system is
-     to type the command `gtk-config'. If this command is recognized,
-     gtk is present. The present version of tvt.illux uses gtk version
-     1.2.9 (you may check the version number of gtk by typing the command
-     `gtk-config --version').
+  2) gtk 2.0: the graph viewer program tvt.illux requires this
+     library.  An easy way to test whether gtk is installed in your
+     system is to type the command:
+     `pkg-config --exists gtk+-2.0 && echo YES'.
 
-  The compilation of TVT is started by typing the command `gmake' in
+     If this command outputs `YES', gtk is present.
+
+     Originally tvt.illux used gtk version 1.2.9. Currently it is
+     modified to compile with gtk 2.24.10.
+
+  The compilation of TVT is started by typing the command `make' in
   the root directory of TVT. After the compilation is finished, there
-  should be copies of all the TVT programs in the tvt_v3.1.1/bin/
+  should be copies of all the TVT programs in the bin
   directory. If the compilation was successful, there should be the
-  following 24 programs and scripts in the tvt_v3.1.1/bin/ directory:
+  following 24 programs and scripts in the bin directory:
 
   tvt.CFFD_normalize
   tvt.CFFDcompare
@@ -81,4 +100,4 @@
 
 ---------------
 
-Last modifications to this document: Wed May 25 00:40:28 EEST 2005
+Last modifications to this document: Thu Mar 21 13:42:38 EET 2013
