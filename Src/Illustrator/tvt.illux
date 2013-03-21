@@ -1,0 +1,8 @@
+#!/bin/sh
+TEMPFILE=/tmp/illuxtmp$$
+tvt.illus "$@" > $TEMPFILE
+if [ $? -eq 0 ]
+then
+    tvt.illux_view < $TEMPFILE
+fi
+rm $TEMPFILE

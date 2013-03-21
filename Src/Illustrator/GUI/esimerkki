@@ -1,0 +1,15 @@
+S (0,0) "Nimi 1" "black" "red" {"Prop 1""Prop 2"}
+S (1,0) "Nimi 2" "black" "yellow"
+S (2,0) "Nimi 3" "black" "yellow" {"Prop 3"dl_rej}
+S (3,0) "Nimi 4" "#000000" "#FFFF00"
+S (1,1) "Nimi 5" "#000000" "#FFFF00"
+S (2,1) "Nimi 6" "#000000" "#FFFF00" {"Prop 5"}
+T {(0,0)(.1,.2)(.3,.3)(.7,.3)(.9,.2)(1,0)} "Nuoli 1" "#0000FF" "x"
+T {(1,0)(1.1,.2)(1.3,.3)(1.7,.3)(1.9,.2)(2,0)} "Nuoli 2" "blue" "x"
+T {(2,0)(2.1,.2)(2.3,.3)(2.7,.3)(2.9,.2)(3,0)} "Nuoli 3" "#008800" "xxxxxxxx    "
+C "Tila 1" "black" "red"
+C "Tila 2" "black" "yellow"
+A "Tapahtuma 1" "blue" "x"
+A "Tapahtuma 2" "#008800" "xxxxxxxx    "
+H "6 tilaa, 3 tapahtumaa"
+H "Done"

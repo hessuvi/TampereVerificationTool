@@ -1,0 +1,296 @@
+graph.o: graph.cc graph.hh iteradap.hh
+point.o: point.cc point.hh
+line.o: line.cc line.hh point.hh
+linealg.o: linealg.cc linealg.hh point.hh
+random.o: random.cc random.hh
+lts.inst.o: lts.inst.cc lts.hh point.hh line.hh graph.hh iteradap.hh \
+  ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/LSTS_File/iLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh \
+  ../FileFormats/LSTS_File/LSTSiAPpredecs.hh lts_draw_write.hh \
+  ../FrameWork/error_handling.hh
+layout.inst.o: layout.inst.cc layout.hh lts.hh point.hh line.hh graph.hh \
+  iteradap.hh ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  grid.hh initial.hh level.hh nonsym.hh localsea.hh sa.hh arrows.hh \
+  linealg.hh objfunc.hh genetic.hh
+initial.o: initial.cc initial.hh grid.hh lts.hh point.hh line.hh graph.hh \
+  iteradap.hh ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+level.inst.o: level.inst.cc level.hh grid.hh lts.hh point.hh line.hh \
+  graph.hh iteradap.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+nonsym.o: nonsym.cc nonsym.hh grid.hh lts.hh point.hh line.hh graph.hh \
+  iteradap.hh ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+localsea.inst.o: localsea.inst.cc localsea.hh grid.hh lts.hh point.hh \
+  line.hh graph.hh iteradap.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  objfunc.hh
+sa.inst.o: sa.inst.cc sa.hh grid.hh lts.hh point.hh line.hh graph.hh \
+  iteradap.hh ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  objfunc.hh random.hh
+genetic.inst.o: genetic.inst.cc genetic.hh lts.hh point.hh line.hh \
+  graph.hh iteradap.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FrameWork/DRand48.hh
+arrows.inst.o: arrows.inst.cc arrows.hh grid.hh lts.hh point.hh line.hh \
+  graph.hh iteradap.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  linealg.hh surround.hh
+grid.inst.o: grid.inst.cc grid.hh lts.hh point.hh line.hh graph.hh \
+  iteradap.hh ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+surround.o: surround.cc surround.hh lts.hh point.hh line.hh graph.hh \
+  iteradap.hh ../FrameWork/StateProps.hh ../FrameWork/BitVector.hh \
+  ../FrameWork/error_handling.hh ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  auto_vec.hh ../ThirdPartySoftware/lp_solve/lpkit.h \
+  ../ThirdPartySoftware/lp_solve/hash.h
+styles.inst.o: styles.inst.cc styles.hh
+lts_draw_write.o: lts_draw_write.cc lts_draw_write.hh point.hh
+plain_algo.inst.o: plain_algo.inst.cc layout.hh lts.hh point.hh line.hh \
+  graph.hh iteradap.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  styles.hh lts_draw_write.hh ../FrameWork/error_handling.hh \
+  ../FrameWork/TvtCLP.hh ../FrameWork/CommandLineParser.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/LogWrite.hh styles.tmpl.cc
+graph_tmpl.inst.o: graph_tmpl.inst.cc graph.cc graph.hh iteradap.hh \
+  lts.hh point.hh line.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+stl.inst.o: stl.inst.cc point.hh

@@ -1,0 +1,433 @@
+folded/fdState.o: folded/fdState.cc folded/fdState.hh \
+  ./folded/fdTransition.hh ./uf_types.hh ./compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh ./VarTable.hh ./uf_types.hh \
+  ./compiler/ps.hh ./uf_types.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+folded/fdTransition.o: folded/fdTransition.cc folded/fdTransition.hh \
+  ./uf_types.hh ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh ./compiler/ps.hh \
+  ./uf_types.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+unfolded/ufSProps.o: unfolded/ufSProps.cc unfolded/ufSProps.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ./VarTable.hh ./uf_types.hh ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ./compiler/ps.hh ./uf_types.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+unfolded/ufWriter.o: unfolded/ufWriter.cc unfolded/ufWriter.hh \
+  ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/LSTSoAPpredecs.hh \
+  ../FrameWork/TransitionsContainer.hh ../FrameWork/MemoryStack.hh \
+  ../FrameWork/TVTvec.hh ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh unfolded/ufSProps.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ./compiler/ps.hh ./uf_types.hh ./compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+compiler/syntax/TypeStructure.o: compiler/syntax/TypeStructure.cc \
+  compiler/syntax/TypeStructure.hh ./uf_types.hh ./compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh compiler/syntax/itx.hh
+compiler/syntax/ufStateProps.o: compiler/syntax/ufStateProps.cc \
+  compiler/syntax/ufStateProps.hh ./unfolded/ufSProps.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ./folded/fdState.hh ./folded/fdTransition.hh ./uf_types.hh \
+  ./compiler/uf_config.hh ../ff/itstream.hh ../ff/icstream.hh \
+  ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  compiler/syntax/itx.hh
+compiler/syntax/Variables.o: compiler/syntax/Variables.cc \
+  compiler/syntax/Variables.hh compiler/syntax/TypeStructure.hh \
+  ./VarTable.hh ./uf_types.hh ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh ./folded/fdState.hh \
+  ./folded/fdTransition.hh ./uf_types.hh ./compiler/ps.hh ./uf_types.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  compiler/syntax/itx.hh
+compiler/syntax/AlphabetDef.o: compiler/syntax/AlphabetDef.cc \
+  compiler/syntax/AlphabetDef.hh ./VarTable.hh ./uf_types.hh \
+  ./compiler/uf_config.hh ../ff/itstream.hh ../ff/icstream.hh \
+  ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh ./compiler/ps.hh \
+  ./uf_types.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ./FoldedLsts.hh ./DynamicArray.hh ./folded/fdState.hh \
+  ./folded/fdTransition.hh ./uf_types.hh ./folded/fdTransition.hh \
+  ./Alphabet.hh ./VarTable.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/StringTree/StringMap.hh compiler/syntax/itx.hh
+compiler/ps.o: compiler/ps.cc compiler/ps.hh ./uf_types.hh \
+  ./compiler/uf_config.hh ../ff/itstream.hh ../ff/icstream.hh \
+  ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+compiler/oBC.o: compiler/oBC.cc compiler/oBC.hh compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh \
+  compiler/sp_codes.hh ../FrameWork/config.hh compiler/ps.hh \
+  ./uf_types.hh ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FrameWork/error_handling.hh
+compiler/ExpressionParser.o: compiler/ExpressionParser.cc \
+  compiler/ExpressionParser.hh compiler/oBC.hh compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh \
+  compiler/sp_codes.hh ../FrameWork/config.hh compiler/ps.hh \
+  ./uf_types.hh ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ./FoldedLsts.hh ./uf_types.hh ./DynamicArray.hh ./folded/fdState.hh \
+  ./folded/fdTransition.hh ./uf_types.hh ./folded/fdTransition.hh \
+  compiler/syntax/itx.hh
+compiler/Compiler.o: compiler/Compiler.cc compiler/Compiler.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh \
+  compiler/uf_config.hh ./FoldedLsts.hh ./uf_types.hh \
+  ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh ./DynamicArray.hh \
+  ./folded/fdState.hh ./folded/fdTransition.hh ./uf_types.hh \
+  ./folded/fdTransition.hh ./Alphabet.hh ./VarTable.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/StringTree/StringMap.hh ./VarTable.hh compiler/ps.hh \
+  ./uf_types.hh ../FrameWork/StringTree/StringMap.hh compiler/oBC.hh \
+  compiler/sp_codes.hh ../FrameWork/config.hh \
+  compiler/ExpressionParser.hh ./folded/fdState.hh \
+  compiler/syntax/ufTypeDefs.hh compiler/syntax/TypeStructure.hh \
+  compiler/syntax/itx.hh compiler/syntax/ufStateProps.hh \
+  compiler/syntax/Variables.hh compiler/syntax/AlphabetDef.hh \
+  compiler/syntax/itx.hh
+uf_types.o: uf_types.cc uf_types.hh compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh compiler/ps.hh ./uf_types.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+VarTable.o: VarTable.cc VarTable.hh uf_types.hh compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh compiler/ps.hh ./uf_types.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+Alphabet.o: Alphabet.cc Alphabet.hh uf_types.hh compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh VarTable.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/StringTree/StringMap.hh
+FoldedLsts.o: FoldedLsts.cc FoldedLsts.hh uf_types.hh \
+  compiler/uf_config.hh ../ff/itstream.hh ../ff/icstream.hh \
+  ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh DynamicArray.hh \
+  folded/fdState.hh ./folded/fdTransition.hh ./uf_types.hh \
+  folded/fdTransition.hh Alphabet.hh VarTable.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/StringTree/StringMap.hh eval/iBC.hh \
+  ./compiler/uf_config.hh ./compiler/ps.hh ./uf_types.hh \
+  ../FrameWork/StringTree/StringMap.hh eval/ExpEvaluator.hh \
+  compiler/ps.hh UnfoldedLsts.hh unfolded/DfsStack.hh ./DynamicArray.hh \
+  ../FrameWork/error_handling.hh unfolded/ufWriter.hh \
+  ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/LSTSoAPpredecs.hh \
+  ../FrameWork/TransitionsContainer.hh ../FrameWork/MemoryStack.hh \
+  ../FrameWork/TVTvec.hh ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh unfolded/ufSProps.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh
+UnfoldedLsts.o: UnfoldedLsts.cc UnfoldedLsts.hh FoldedLsts.hh uf_types.hh \
+  compiler/uf_config.hh ../ff/itstream.hh ../ff/icstream.hh \
+  ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh DynamicArray.hh \
+  folded/fdState.hh ./folded/fdTransition.hh ./uf_types.hh \
+  folded/fdTransition.hh unfolded/DfsStack.hh ./DynamicArray.hh \
+  ../FrameWork/error_handling.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  unfolded/ufWriter.hh ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/LSTSoAPpredecs.hh \
+  ../FrameWork/TransitionsContainer.hh ../FrameWork/MemoryStack.hh \
+  ../FrameWork/TVTvec.hh ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh unfolded/ufSProps.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh
+eval/iBC.o: eval/iBC.cc eval/iBC.hh ./compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ./compiler/ps.hh \
+  ./uf_types.hh ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh
+eval/ExpEvaluator.o: eval/ExpEvaluator.cc eval/ExpEvaluator.hh \
+  eval/iBC.hh ./compiler/uf_config.hh ../ff/itstream.hh ../ff/icstream.hh \
+  ../ff/its_base.hh ./compiler/ps.hh ./uf_types.hh \
+  ./compiler/uf_config.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ./uf_types.hh ../FrameWork/error_handling.hh ../FrameWork/LogWrite.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh
+main.o: main.cc ../FrameWork/TvtCLP.hh ../FrameWork/CommandLineParser.hh \
+  ../FrameWork/InOutStream.hh ../FrameWork/History.hh \
+  ../FrameWork/HistoryNode.hh ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/LSTSoAPpredecs.hh unfolded/ufWriter.hh \
+  ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FrameWork/TransitionsContainer.hh ../FrameWork/MemoryStack.hh \
+  ../FrameWork/TVTvec.hh ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh unfolded/ufSProps.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  UnfoldedLsts.hh FoldedLsts.hh uf_types.hh compiler/uf_config.hh \
+  ../ff/itstream.hh ../ff/icstream.hh ../ff/its_base.hh ../ff/itstream.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh DynamicArray.hh \
+  folded/fdState.hh ./folded/fdTransition.hh ./uf_types.hh \
+  folded/fdTransition.hh unfolded/DfsStack.hh ./DynamicArray.hh \
+  ../FrameWork/error_handling.hh ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  compiler/ps.hh ./uf_types.hh ../FrameWork/StringTree/StringMap.hh \
+  compiler/Compiler.hh compiler/uf_config.hh

@@ -1,0 +1,45 @@
+#!/bin/sh
+pipe="tvt.taureduction - | tvt.SBreduction - | tvt.lsts2ag - | tvt.detag - | tvt.SBreduction - | tvt.ag2lsts - | tvt.SBreduction - "
+
+if [ $# -eq 1 -a \( $1 = -h -o $1 = --help \) -o $# -gt 2 ]
+then
+
+cat <<!
+
+Shell script which normalizes an LSTS with respect to CFFD-equivalence. 
+Runs the following commands on the LSTS:
+tvt.SBreduction, tvt.lsts2ag, tvt.detag, tvt.SBreduction, tvt.ag2lsts, tvt.SBreduction
+
+Usage:
+ tvt.CFFD_normalize [<options>] [<inputfile> [<outputfile>]]
+
+Options:
+ -h
+ --help            This text.
+
+Input file name can be replaced by '-' which means that input
+is stdin. If output file name is not specified or it is '-', the output will
+ be stdout.
+
+co(2002): VARG research group at Tampere University of Technology,
+          Institute of Software Systems.
+!
+
+else
+
+if [ $# -gt 0 -a ${1:-0} != - ] 
+then
+
+	input="cat \"$1\" |"
+fi
+
+if [ $# -eq 2 -a ${2:-0} != - ] 
+then
+
+	output="> \"$2\""
+fi
+
+eval $input $pipe $output
+
+fi
+

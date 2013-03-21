@@ -1,0 +1,64 @@
+  - LTS-piirtokomentotiedoston formaatti:
+
+  Tila:
+S (x,y) "nimi" "reunan väri" "täytön väri"
+  Esim:
+S (1,2) "Tila 1" "black" "#00FF00"
+
+  Tapahtuma:
+T {(x1,y1)(x2,y2)...} "nimi" "väri" "dash"
+  Esim:
+T {(1,2)(1.5,2.5)(2,2)} "Tapahtuma 1" "red" "xxxx    "
+
+  Teksti:
+N (x,y) "teksti"
+  Esim:
+N (1.2,2.3) "Tapahtuma 1"
+
+  Tilaselite:
+C "nimi" "reunan väri" "täytön väri"
+  Esim:
+C "Tila 1" "black" "#00FF00"
+
+  Tapahtumaselite:
+A "nimi" "väri" "dash"
+  Esim:
+A "Tapahtuma 1" "red" "xxxx    "
+
+  Historia:
+H "teksti"
+
+  Jokaisen erotinmerkin ympärillä voi olla mielivaltainen määrä välilyöntejä.
+Poikkeuksia ovat piste, joka ei ole erotinmerkki, vaan float-arvon desimaali-
+pilkku, ja lainausmerkkien sisäpuoli, joka otetaan sellaisenaan.
+  Esimerkki LTS-piirtokomentotiedoston sisällöstä:
+
+S (0,0) "Tila 1" "black" "yellow"
+S (1,0) "Tila 2" "black" "green"
+T {(0,0)(.2,.2)(.8,.2)(1,0)} "Tapahtuma 1" "red" ""
+C "Tila 1" "black" "yellow"
+C "Tila 2" "black" "green"
+A "Tapahtuma 1" "red" ""
+H "2 tilaa, 1 tapahtuma"
+
+
+  - Värin formaatti:
+
+  "#RRGGBB"
+
+  RR on punaisen arvo heksakoodina väliltä 00 - FF.
+  GG vastaavasti vihreän arvo.
+  BB vastaavasti sinisen arvo.
+
+  Värin voi ilmaista myös avainsanalla, esim "red", "green", jne.
+
+  - Dash-patternin formaatti:
+
+  Stringissä oleva ei-välilyönti tulkitaan päällä olevaksi pikseliksi ja
+välilyönti tulkitaan aukoksi (eli esim "xx  " on sama asia kuin "aa  " tai
+"12  "). Patternin tulisi alkaa aina merkkijaksolla. Patternissa tulisi olla
+välilyöntijakso jokaista merkkijaksoa kohti (ts. patternin tulisi alkaa
+merk(e)illä ja loppua välilyönt(e)i(h)in). Poikkeuksena on pattern, jossa ei
+ole ainuttakaan välilyöntiä, joka tulkitaan solid-viivaksi (myös tyhjä
+merkkijono tulkitaan sellaiseksi).
+  Esimerkkejä: "xxxx  ", "xx    xxxx  ", "xxxxx ", "x"

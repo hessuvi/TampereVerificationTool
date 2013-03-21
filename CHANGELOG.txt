@@ -1,0 +1,87 @@
+0.792 26.5.2004 timoe
+---------------------
+* The new version of the radix tree located in
+  Src/FrameWork/RadixTree/RaxixTree.hh is ready for use.
+
+0.776 26.4.2004 timoe
+---------------------
+* A new version of the radix tree implementation added to the repository.
+  This version has some special features prepared for tvt.parallel and thus
+  it consumes more memory than the common version. No iterator available.
+
+0.752 24.1.2004 timoe
+---------------------
+* "Cosmetical" changes here and there. Happy New Year World and CHANGELOG!
+
+0.745 28.10.2003 jaco
+---------------------
+* Fixed a bug in tvt.ag2tp.  It underallocated space for a BitVector.
+  Not tested thoroughly enough but it should work for 99.9% of cases.
+
+0.744 15.10.2003 timoe
+---------------------
+* Added files of the development version of the tvt.compiler to the
+  Src/iLangCompiler directory. This version is not supposed to be
+  stable at all times.
+
+0.733 18.9.2003 timoe
+---------------------
+* Added support for extra information in transitions.
+
+0.723 21.8.2003 warp
+--------------------
+* createswitch program added (still undocumented).
+* Some bugs fixed (such as tvt.ag2lsts writing the header info
+  Initially_unstable, which is acceptance graph info).
+
+0.718 13.8.2003 timoe
+---------------------
+* ActionNamesStore operates in the "smart mode" for now on (no need to
+  have a correct constructor's parameter anymore).
+
+0.716 3.7.2003 jaco
+-------------------
+
+* Forgot to change "/dl-rej" & "/ll-rej" to "/dl_rej" & "/ll_rej" in
+  Src/ag2tp/testall.  Fixed.
+
+0.715 3.7.2003 jaco
+-------------------
+
+* Fixed a bug in Src/ag2tp/OutputLSTS.cc that labeled every state in the
+  resulting tester process as a deadlock reject state.
+* Renamed "/dl-rej" and "/ll-rej" in the output tester process to "/dl_rej"
+  and "/ll_rej".
+
+0.704 10.6.2003 warp
+--------------------
+
+* Added wildcard support for action name parameters in tvt.extendedrules
+* Added 'hide' command to the State_prop_rules section
+* New program: tvt.testerrules (still needs to be documented)
+
+3.0.1
+----- <May 20 2003>
+
+ * An erroneus handling of livelock reject proposition in tvt.parallel
+   fixed.
+ * tvt.CFFDcompare script fixed.
+ * A bug in handling header promises of LSTS files fixed.
+
+0.670 20.5.2003 jaco
+--------------------
+
+* Fixed small error in instructions.tex (concerning tvt.ag2tp).
+
+0.697 20.5.2003 jaco
+--------------------
+
+* Added the Src/ag2tp directory containing a tool to convert acceptance
+  graphs to tester processes.  Updated various Makefiles to make the tool
+  part of the system.
+
+* Updated the documentation to describe the new tool.
+
+* Fixed Makefile (tried to strip a shell script) and CHANGELOG.txt
+  (important to couple changes with checkin version) that were broken in
+  0.694 and 0.695.

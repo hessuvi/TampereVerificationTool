@@ -1,0 +1,27 @@
+#!/bin/sh
+
+cat - <<EOF
+###########################################################################
+#                                                                         #
+#                          IMPORTANT NOTE                                 #
+#                          --------------                                 #
+#                                                                         #
+#   The program name 'tvt.detlsts' is obsolete and has been replaced      #
+# with the name 'tvt.detag'.                                              #
+#                                                                         #
+# ---------------------------------------------------------------------   #
+#   Please change your makefiles and scripts to use tvt.detag instead     #
+#   of tvt.detlsts                                                        #
+# ---------------------------------------------------------------------   #
+#                                                                         #
+#   This warning script will run 'tvt.detag' instead of 'tvt.detlsts'     #
+# for backwards compatibility, but this is only temporary. This script    #
+# will be removed in the future.                                          #
+#                                                                         #
+###########################################################################
+EOF
+
+if [ "$1" != "" ]
+then
+    tvt.detag "$@"
+fi

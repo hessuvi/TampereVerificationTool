@@ -1,0 +1,8 @@
+#!/bin/sh
+gawk '
+BEGIN{r="1.\"/rej\" -> rej; 1.\"/dl_rej\" -> dl_rej; 1.\"/ll_rej\" -> ll_rej;"}
+/Begin State_prop_rules/{print;print r;t=1;next}
+/End_parallel_composition_rules/&&(t==0){print "Begin State_prop_rules"
+print r; print "End State_prop_rules"; print;next}
+{print}
+'

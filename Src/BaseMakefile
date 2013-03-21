@@ -1,0 +1,36 @@
+include $(TVT_BASE)/.makefile_vars
+
+$(BIN): $(SOURCES:.cc=.o) $(LIBRARIES)
+	$(LD) $(SOURCES:.cc=.o) $(LDFLAGS) -o $@
+
+objects: $(SOURCES:.cc=.o)
+
+-include $(DEP_FILE)
+
+%.o: %.cc
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
+%.dep: %.cc
+	@$(CPP) $(INC_DIRS) -MT $(^:.cc=.o) -MM $^ >> $(DEP_FILE)
+
+newDep:
+	@echo Constructing a new dependency file.
+	@$(RM) $(DEP_FILE)
+
+dep: newDep $(SOURCES:.cc=.dep)
+#	@$(CPP) $(INC_DIRS) -MM $(SOURCES) > $(DEP_FILE)
+	@echo Done.
+
+createDep: $(SOURCES:.cc=.dep)
+	@echo Done.
+
+$(DEP_FILE):
+	@echo Creating a new dependency file.
+	@echo : > $@
+	@$(MAKE) createDep
+
+clean:
+	$(RM) *.o
+	$(RM) $(BIN)
+
+.PHONY: clean createDep dep newDep objects

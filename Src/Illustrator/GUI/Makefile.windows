@@ -1,0 +1,41 @@
+# This is a makefile for compiling GUI in Windows.
+# The compiler is MinGw:s gcc. Win GTK is from
+# http://www.gimp.org/win32.
+
+-include ../../.makefile_vars
+-include ../../comp_settings
+
+CXX = gcc
+LD = gcc
+
+INST_DIR = D:/gtk
+
+WINGTK_FLAGS = -mwindows -mno-cygwin -fnative-struct
+
+CXXFLAGS = -I D:/gtk/include -Wall -W -pedantic -ansi -I. $(WINGTK_FLAGS)
+
+LDFLAGS = -lm -lstdc++ -s \
+	$(WINGTK_FLAGS) \
+	$(INST_DIR)/lib/libgdk.dll.a \
+	$(INST_DIR)/lib/libgtk.dll.a
+
+GLDIR=.
+OBJS=main.o lts_viewer.o gtklib.o graflib.o lts_draw_reader.o
+
+main: $(OBJS)
+	$(LD) $(OBJS) -o main $(LDFLAGS)
+
+main.o: main.cc lts_viewer.hh $(GLDIR)/gtklib.hh lts_draw_reader.hh
+	$(CXX) $(CXXFLAGS) main.cc -c
+
+lts_draw_reader.o: lts_draw_reader.cc lts_draw_reader.hh point.hh
+	$(CXX) $(CXXFLAGS) lts_draw_reader.cc -c
+
+lts_viewer.o: lts_viewer.cc lts_viewer.hh $(GLDIR)/graflib.hh point.hh constants.hh
+	$(CXX) $(CXXFLAGS) lts_viewer.cc -c -D WINDOWS
+
+gtklib.o: $(GLDIR)/gtklib.cc $(GLDIR)/gtklib.hh $(GLDIR)/graflib.hh
+	$(CXX) $(CXXFLAGS) $(GLDIR)/gtklib.cc -c
+
+graflib.o: $(GLDIR)/graflib.cc $(GLDIR)/graflib.hh
+	$(CXX) $(CXXFLAGS) $(GLDIR)/graflib.cc -c

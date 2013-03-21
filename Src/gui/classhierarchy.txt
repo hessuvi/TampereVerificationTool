@@ -1,0 +1,8 @@
+TVTItem
+ +----SourceProcess
+ |     +----InputLanguageSource
+ |     +----LSTSEditorSource
+ +----Operation
+       +----OperationSBRed
+       +----MultipleInputOperation
+             +----OperationParComp

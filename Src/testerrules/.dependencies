@@ -1,0 +1,43 @@
+testerrules.o: testerrules.cc ../FrameWork/TvtCLP.hh \
+  ../FrameWork/CommandLineParser.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/iLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh \
+  ../FileFormats/LSTS_File/LSTSiAPpredecs.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/ParRulesFile/ParRulesFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/LSTS_File/Header.hh \
+  ../FileFormats/ParRulesFile/ParComponentsAP.hh \
+  ../FileFormats/ParRulesFile/../LSTS_File/SectionAP.hh \
+  ../FileFormats/ParRulesFile/RulesAP.hh \
+  ../FileFormats/ParRulesFile/StatePropRulesAP.hh \
+  ../FileFormats/ParRulesFile/ParRulesSections/StatePropRulesSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/ParRulesFile/ParRulesSections/../StatePropRulesAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesStore.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FileFormats/FileFormat/Forwarder.hh

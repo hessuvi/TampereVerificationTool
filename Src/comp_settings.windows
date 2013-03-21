@@ -1,0 +1,14 @@
+# This is an example comp_settings file used in Windows*. Please,
+# replace or add settings below and rename this file to
+# "comp_settings". The default settings can be used to compile TVT
+# with the djgpp compiler (http://www.delorie.com/djgpp).
+
+CXX = gcc
+WARNINGS = -W -Wall -pedantic
+
+# Note: the usual warning option "-ansi" is left out above, since
+#   it causes some problems with the latest version of djgpp.
+
+# OPTIMIZATIONS = -O2
+
+LD = gxx

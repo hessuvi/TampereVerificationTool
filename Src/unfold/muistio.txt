@@ -1,0 +1,109 @@
+Sekalaisia kommentteja:
+
+* Brute-force-evaluoinnissa ei tarvitse tarkistaa, ovatko muuttujien arvot
+  laillisella arvoalueella. Tämä siksi, koska vain laillisia arvoja
+  ylipäätään kokeillaan ;-)
+
+@@@ yleistä
+
+TOIMII:
+ * delete
+ * node1.proc -- kunnon haaste
+ * AA-tarkistus, että value on laillisissa rajoissa: alku- ja loppuehdot:
+   laittomuus ei haittaa, koska silloin ko. lauseke vain evaluoituu falseksi.
+
+TODO:
+ * häntärekursioevaluointi
+
+
+
+@@@ input:
+
+TOIMII:
+ * Parametrina muu kuin muuttujan nimi, tai väärä muuttujan nimi.
+ * Väärät parametrit tuottavat oikean virheilmoituksen.
+ * Parametrimäärittelyssä voi käyttää pelkkää tyypin tai muuttujan nimeä
+   (sama toimii outputissa).
+ * Muuttujat/tyypit samastetaan toisiinsa, jos niiden arvoalueet ovat samat.
+ * Bool/boolean ei toimi parametrimäärittelyssä.
+ * Muuttujan nimi ei saa olla sama kuin vakion nimi.
+ * Jos parametrilistassa käyttää vakion nimeä, tulee virhe "a variable name
+   expected".
+ * Alphabet-lohkossa ei voi käyttää nimettömiä tyyppejä.
+
+TODO:
+
+
+MISC:
+ * Int-tyyppi tulkitaan [0..0]-tyypiksi parametrimäärittelyssä. Onko ongelma?
+ * Pitäisiko vakion käyttö sallia parametrimäärittelyssä? Ei tunnu hyvältä
+   idealta kuitenkaan.
+
+
+@@@ output:
+
+TOIMII:
+ * AA tarkistus, että value on laillisissa rajoissa.
+
+TODO:
+ * Mahdollisuus käyttää pelkkiä vakioarvoja lausekkeena.
+
+@@@ Bool-muuttujat ehdoissa:
+
+TOIMII:
+ * precond.nproc -- vika oli alustamattomassa
+   VarTable::new_variables -vektorissa.
+
+@@@ DELETE:
+
+TOIMII:
+ * Jäsennys ja jälkiehtojen evaluointi DELETE:n ollessa läsnä.
+ * Määrittelemättömien tai deletoitujen muuttujien käytön esto
+   (käännösaikainen tarkistus).
+
+TODO:
+
+@@@ optimoinnit:
+
+TODO:
+ * mieti voisiko muuttujataulukon kopiointia vältää jossain kohti.
+
+@@@ haarautumisoperaattori:
+
+*tila:
+        a -> (b -> t3 [] c -> t4)
+# a:n jälkeen voidaan jatkaa joko b:llä tai c:llä
+
+
+        a -> b -> t3 [] c -> t4
+      
+# a, b vie t3 tai vaihteht. c vie t4
+
+@@@ muuttujien alustus:
+
+TODO:
+ * muuttujat voi alustaa laittomilla arvoilla.
+
+@@@ inc & dec /_no_wrap: * TOIMII!
+
+tyyppimäärittelyt:
+
+TODO:
+ * x : [..] y : x
+
+@@@ TILAPROPOSITIOT
+
+TOIMII:
+ * Tilapropositiot ovat tavallisia muuttujia, mutta kuitenkin aina
+   esiintyvät muuttujavektorin alussa tilapropositioiden tarkastamisen
+   nopeuden takia.
+
+
+EPÄYHTEENSOPIVUUDET:
+
+* TRUE & FALSE vs true & false (unfold)
+* GATES & EVENT_PARAMS vs ALPHABET (unfold)
+* unfoldin laajennokset (uudet operaattorit jne.)
+* tvt.compiler sallii tapahtumilla ja muuttujilla samoja nimiä,
+  unfold ei salli.
+* Vanhaa syntaksia tilapropositioille ei tueta.

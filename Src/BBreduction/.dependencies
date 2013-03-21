@@ -1,0 +1,86 @@
+BBreduction.o: BBreduction.cc BBreducer.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/ActionNamesStore.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh ../FrameWork/TvtCLP.hh \
+  ../FrameWork/CommandLineParser.hh ../FrameWork/InOutStream.hh \
+  ../TauReduction/TauReductionClass.cc ../FrameWork/InputLSTSContainer.hh \
+  ../FileFormats/LSTS_File/iLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh \
+  ../FileFormats/LSTS_File/LSTSiAPpredecs.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/DivBitsAP.hh \
+  ../FileFormats/LSTS_File/ActionNamesStore.hh ../FrameWork/AccSets.hh \
+  ../FileFormats/LSTS_File/AccSetsAP.hh ../FrameWork/RO_AccSets.hh \
+  ../FrameWork/StateProps.hh ../FrameWork/TransitionsContainer.hh \
+  ../FrameWork/MemoryStack.hh ../FrameWork/TVTvec.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FrameWork/StateProps.hh ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FileFormats/LSTS_File/LSTSoAPpredecs.hh
+BBreducer.o: BBreducer.cc BBreducer.hh ../FrameWork/StateProps.hh \
+  ../FrameWork/BitVector.hh ../FrameWork/error_handling.hh \
+  ../FileFormats/LSTS_File/StatePropsAP.hh \
+  ../FileFormats/LSTS_File/SectionAP.hh ../FrameWork/InOutStream.hh \
+  ../FrameWork/History.hh ../FrameWork/HistoryNode.hh \
+  ../FrameWork/config.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ../FileFormats/LSTS_File/Header.hh ../FrameWork/config.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/constants.hh ../FrameWork/config.hh \
+  ../FrameWork/InOutStream.hh ../FileFormats/FileFormat/Lexical/Token.hh \
+  ../FileFormats/LSTS_File/ActionNamesStore.hh \
+  ../FileFormats/LSTS_File/ActionNamesAP.hh \
+  ../FrameWork/StringTree/StringMap.hh \
+  ../FrameWork/StringTree/StringSet.hh \
+  ../FrameWork/StringTree/CoilArray.hh \
+  ../FrameWork/StringTree/iCoilArray.hh \
+  ../FrameWork/StringTree/static_vector.hh \
+  ../FrameWork/StringTree/debug.hh ../FrameWork/StringTree/CharArray.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FrameWork/TransitionsContainer.hh ../FrameWork/MemoryStack.hh \
+  ../FrameWork/TVTvec.hh ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ../FileFormats/FileFormat/Section.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/TransitionsAP.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/LSTS_File/oLSTS_File.hh \
+  ../FileFormats/LSTS_File/LstsFile.hh \
+  ../FileFormats/FileFormat/scFileFormat.hh \
+  ../FileFormats/FileFormat/FileFormat.hh \
+  ../FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ../FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ../FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ../FileFormats/FileFormat/Forwarder.hh \
+  ../FileFormats/LSTS_File/Header.hh \
+  ../FileFormats/LSTS_File/LSTSoAPpredecs.hh

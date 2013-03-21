@@ -1,0 +1,18 @@
+Changes introduced in the recent TVT versions
+---------------------------------------------
+
+3.0.2
+----- <March 22 2004>
+
+ * A support for wild cards added to tvt.extendedrules.
+ * New features to tvt.illux.
+ * A bug in tvt.parallel fixed that produced results bigger than necessary
+   when using stubborn sets.
+
+3.0.1
+----- <May 20 2003>
+
+ * An erroneus handling of livelock reject proposition in tvt.parallel
+   fixed.
+ * tvt.CFFDcompare script fixed (*nix only).
+ * A bug in handling header promises of LSTS files fixed.

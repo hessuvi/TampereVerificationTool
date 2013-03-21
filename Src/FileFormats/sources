@@ -1,0 +1,90 @@
+# Subdirectories:
+
+FF = FileFormat
+LEX = FileFormat/Lexical
+LSTS_FILE = LSTS_File
+LSTS_SECS = LSTS_File/LSTS_Sections
+
+PAR_RULES_FILE = ParRulesFile
+PAR_SECS = ParRulesFile/ParRulesSections
+
+# Sources:
+
+LEX_SOURCES = Exceptions.cc $(LEX)/Token.cc $(LEX)/TokenStream.cc \
+	$(LEX)/ITokenStream.cc $(LEX)/OTokenStream.cc $(LEX)/fparser.cc
+
+FF_SOURCES = FileFormat/Section.cc FileFormat/FileFormat.cc \
+	FileFormat/scFileFormat.cc FileFormat/Checker.cc \
+	FileFormat/Forwarder.cc
+
+SEC_SOURCES = $(LSTS_SECS)/TransitionsSection.cc \
+        $(LSTS_SECS)/TransitionsChecker.cc \
+\
+	$(LSTS_SECS)/HeaderSection.cc \
+\
+        $(LSTS_SECS)/HistorySection.cc \
+\
+        $(LSTS_SECS)/ActionNamesSection.cc \
+        $(LSTS_SECS)/ActionNamesChecker.cc \
+\
+        $(LSTS_SECS)/StatePropsSection.cc \
+        $(LSTS_SECS)/StatePropsChecker.cc \
+\
+        $(LSTS_SECS)/StateNamesSection.cc \
+        $(LSTS_SECS)/StateNamesChecker.cc \
+\
+        $(LSTS_SECS)/DivBitsSection.cc \
+        $(LSTS_SECS)/DivBitsChecker.cc \
+\
+        $(LSTS_SECS)/AccSetsSection.cc \
+        $(LSTS_SECS)/AccSetsChecker.cc \
+\
+        $(LSTS_SECS)/LayoutSection.cc \
+        $(LSTS_SECS)/LayoutChecker.cc \
+\
+	LSTS_File/DivBitsAP.cc \
+	LSTS_File/AccSetsAP.cc \
+	LSTS_File/StatePropsAP.cc \
+\
+	LSTS_File/ActionNamesAP.cc \
+	LSTS_File/StateNamesAP.cc \
+	LSTS_File/TransitionsAP.cc \
+\
+	LSTS_File/LayoutAP.cc \
+\
+	LSTS_File/SectionAP.cc
+
+
+LF_SOURCES = LSTS_File/Header.cc \
+\
+        LSTS_File/AccSetsStore.cc \
+\
+        LSTS_File/ActionNamesStore.cc \
+\
+        LSTS_File/DivBitsStore.cc \
+\
+        LSTS_File/StateNamesStore.cc \
+\
+        LSTS_File/TransitionsStore.cc \
+\
+        LSTS_File/StatePropsStore.cc \
+\
+	LSTS_File/iLSTS_File.cc \
+	LSTS_File/oLSTS_File.cc \
+        LSTS_File/LstsFile.cc
+
+
+PAR_SOURCES = ParRulesFile/ParComponentsAP.cc \
+	ParRulesFile/RulesAP.cc \
+	ParRulesFile/StatePropRulesAP.cc \
+\
+	ParRulesFile/StatePropRulesStore.cc \
+\
+	$(PAR_SECS)/ParComponentsSection.cc \
+        $(PAR_SECS)/RulesSection.cc \
+        $(PAR_SECS)/StatePropRulesSection.cc \
+\
+	ParRulesFile/ParRulesFile.cc
+
+FILEFORMATS_SOURCES = $(LEX_SOURCES) $(FF_SOURCES) $(SEC_SOURCES) \
+	$(LF_SOURCES) $(PAR_SOURCES)

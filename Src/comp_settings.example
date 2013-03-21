@@ -1,0 +1,9 @@
+# This is an example comp_settings file. Please, replace or add settings
+# below and rename this file to "comp_settings".
+
+CXX = g++
+OPTIMIZATIONS =
+
+# The notion above means that no optimizations is used in compilation.
+
+LD = g++

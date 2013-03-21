@@ -1,0 +1,3 @@
+Output expressions:
+
+ * first byte is for type of the variable.

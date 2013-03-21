@@ -1,0 +1,60 @@
+#!/bin/sh
+
+if [ "$2" = "" ]
+then
+    echo "Usage: $0 <file1> <file2>"
+    exit
+fi
+
+INFILE1=`basename "$1"`
+INFILE2=`basename "$2"`
+RFILE1="/tmp/$INFILE1.$$_1.tred"
+RFILE2="/tmp/$INFILE2.$$_2.tred"
+FILE1="/tmp/$INFILE1.$$_1.lsdag"
+FILE2="/tmp/$INFILE2.$$_2.lsdag"
+
+tvt.BBreduction -f "$1" "$RFILE1"
+RETVAL=$?
+if [ $RETVAL != 0 ]
+then
+    rm -f "$RFILE1"
+    exit $RETVAL
+fi
+
+tvt.BBreduction -f "$2" "$RFILE2"
+RETVAL=$?
+if [ $RETVAL != 0 ]
+then
+    rm -f "$RFILE1" "$RFILE2"
+    exit $RETVAL
+fi
+
+tvt.lsts2ag "$RFILE1" | tvt.detag -f - "$FILE1"
+RETVAL=$?
+if [ $RETVAL != 0 ]
+then
+    rm -f "$RFILE1" "$RFILE2" "$FILE1"
+    exit $RETVAL
+fi
+
+tvt.lsts2ag "$RFILE2" | tvt.detag -f - "$FILE2"
+RETVAL=$?
+if [ $RETVAL != 0 ]
+then
+    rm -f "$RFILE1" "$RFILE2" "$FILE1" "$FILE2"
+    exit $RETVAL
+fi
+
+rm -f "$RFILE1" "$RFILE2"
+
+tvt.SBcompare -q "$FILE1" "$FILE2"
+
+RETVAL=$?
+if [ $RETVAL = 0 ]
+then
+    echo The LSTSs are CFFD-equivalent
+fi
+
+rm -f "$FILE1" "$FILE2"
+
+exit $RETVAL

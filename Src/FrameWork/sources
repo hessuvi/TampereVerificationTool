@@ -1,0 +1,5 @@
+FRAMEWORK_SOURCES = CommandLineParser.cc InOutStream.cc TvtCLP.cc LogWrite.cc \
+History.cc HistoryNode.cc DRand48.cc fwimpl.cc  \
+StringTree/CharArray.cc StringTree/StringSet.cc InputLSTSContainer.cc \
+StateProps.cc RO_AccSets.cc AccSets.cc TransitionsContainer.cc \
+error_handling.cc

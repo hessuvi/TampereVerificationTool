@@ -1,0 +1,31 @@
+# Precompiler-related variables:
+
+CPP = $(CXX)
+INC_DIRS = -I . -I $(TVT_BASE)/FrameWork \
+	-I $(TVT_BASE)/FileFormats -I $(TVT_BASE)/ff $(LOCAL_INC_DIRS)
+CPPFLAGS = $(INC_DIRS)
+
+# C++-compiler-related variables:
+
+CXX = g++
+WARNINGS = -W -Wall -pedantic -ansi
+OPTIMIZATIONS = -O3
+CXXFLAGS = $(WARNINGS) $(OPTIMIZATIONS) $(LOCAL_CXXFLAGS) $(EXTRA_FLAGS)
+
+# Linker-related variables:
+
+LD = g++
+LIBS = -L $(TVT_BASE) -ltvt $(LOCAL_LIBS)
+LDFLAGS = $(LIBS)
+STATIC_TVTLIB = libtvt.a
+DYNAMIC_TVTLIB = libtvt.so
+LIBRARIES = $(TVT_BASE)/$(STATIC_TVTLIB) $(LOCAL_LIBRARIES)
+
+# Other variables:
+
+DEP_FILE = .dependencies
+TAR = tar
+
+# Including an optional settings file written by a user:
+
+-include $(TVT_BASE)/comp_settings

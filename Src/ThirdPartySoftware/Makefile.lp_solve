@@ -1,0 +1,12 @@
+TVT_BASE = ../..
+
+include $(TVT_BASE)/.makefile_vars
+
+SOURCES = hash.c lpkit.c debug.c presolve.c solve.c
+
+CC = $(CXX) # -ansi -W -Wall -pedantic
+
+liblpk.a: $(SOURCES:.c=.o)
+	@echo Creating $@ static library.
+	@$(AR) r $@ $^
+	@echo Done.

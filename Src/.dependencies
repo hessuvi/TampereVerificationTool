@@ -1,0 +1,924 @@
+FileFormats/Exceptions.o: FileFormats/Exceptions.cc \
+  FileFormats/Exceptions.hh ./FrameWork/LogWrite.hh ./FrameWork/config.hh
+FileFormats/FileFormat/Lexical/Token.o:  \
+ FileFormats/FileFormat/Lexical/Token.cc \
+  FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FileFormats/Exceptions.hh FileFormats/FileFormat/Lexical/charconv.hh \
+  FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/FileFormat/Lexical/TokenStream.o:  \
+ FileFormats/FileFormat/Lexical/TokenStream.cc \
+  FileFormats/FileFormat/Lexical/TokenStream.hh \
+  FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/FileFormat/Lexical/Token.hh ./FileFormats/Exceptions.hh
+FileFormats/FileFormat/Lexical/ITokenStream.o:  \
+ FileFormats/FileFormat/Lexical/ITokenStream.cc \
+  FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  FileFormats/FileFormat/Lexical/TokenStream.hh \
+  FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  FileFormats/FileFormat/Lexical/StringMatcher.hh \
+  FileFormats/FileFormat/Lexical/charconv.hh \
+  FileFormats/FileFormat/Lexical/chartests.hh ./FileFormats/Exceptions.hh \
+  FileFormats/FileFormat/Lexical/ITS_scripting.cc \
+  FileFormats/FileFormat/Lexical/fparser.hh
+FileFormats/FileFormat/Lexical/OTokenStream.o:  \
+ FileFormats/FileFormat/Lexical/OTokenStream.cc \
+  FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/FileFormat/Lexical/TokenStream.hh \
+  FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/FileFormat/Lexical/Token.hh ./FileFormats/Exceptions.hh \
+  FileFormats/FileFormat/Lexical/chartests.hh \
+  FileFormats/FileFormat/Lexical/charconv.hh \
+  FileFormats/FileFormat/Lexical/number2string.hh
+FileFormats/FileFormat/Lexical/fparser.o:  \
+ FileFormats/FileFormat/Lexical/fparser.cc \
+  FileFormats/FileFormat/Lexical/fparser.hh
+FileFormats/FileFormat/Section.o: FileFormats/FileFormat/Section.cc \
+  FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/Exceptions.hh
+FileFormats/FileFormat/FileFormat.o:  \
+ FileFormats/FileFormat/FileFormat.cc \
+  FileFormats/FileFormat/FileFormat.hh \
+  FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  FileFormats/FileFormat/Lexical/TokenStream.hh \
+  FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/FileFormat/Forwarder.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/Exceptions.hh \
+  ./FileFormats/FileFormat/Lexical/charconv.hh
+FileFormats/FileFormat/scFileFormat.o:  \
+ FileFormats/FileFormat/scFileFormat.cc \
+  FileFormats/FileFormat/scFileFormat.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Forwarder.hh FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/FileFormat/Checker.hh ./FileFormats/Exceptions.hh
+FileFormats/FileFormat/Checker.o: FileFormats/FileFormat/Checker.cc \
+  FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh
+FileFormats/FileFormat/Forwarder.o: FileFormats/FileFormat/Forwarder.cc \
+  FileFormats/FileFormat/Forwarder.hh
+FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/TransitionsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh
+FileFormats/LSTS_File/LSTS_Sections/TransitionsChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/TransitionsChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/TransitionsChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/TransitionsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh
+FileFormats/LSTS_File/LSTS_Sections/HeaderSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/HeaderSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/HeaderSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh ./FrameWork/config.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/charconv.hh \
+  FileFormats/LSTS_File/LSTS_Sections/otfvi.hh \
+  ./FrameWork/error_handling.hh
+FileFormats/LSTS_File/LSTS_Sections/HistorySection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/HistorySection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/HistorySection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh ./FrameWork/History.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FrameWork/HistoryNode.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FrameWork/LogWrite.hh ./FrameWork/error_handling.hh
+FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh ./FrameWork/StringTree/StringMap.hh \
+  ./FileFormats/LSTS_File/ActionNamesStore.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh
+FileFormats/LSTS_File/LSTS_Sections/StatePropsSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/StatePropsSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/StatePropsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/StatePropsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/LSTS_File/LSTS_Sections/StatePropsChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/StatePropsChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/StatePropsChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/StatePropsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ./FrameWork/StringTree/StringSet.hh ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh
+FileFormats/LSTS_File/LSTS_Sections/StateNamesSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/StateNamesSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/StateNamesSection.hh \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  ./FileFormats/LSTS_File/StateNamesAP.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/LSTS_File/LSTS_Sections/StateNamesChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/StateNamesChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/StateNamesChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/StateNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/StringTree/StringSet.hh ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh
+FileFormats/LSTS_File/LSTS_Sections/DivBitsSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/DivBitsSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/DivBitsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/DivBitsAP.hh ./FrameWork/config.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/LSTS_File/LSTS_Sections/otfvi.hh
+FileFormats/LSTS_File/LSTS_Sections/DivBitsChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/DivBitsChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/DivBitsChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/DivBitsAP.hh \
+  ./FrameWork/config.hh ./FileFormats/LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/LSTS_File/LSTS_Sections/AccSetsSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/AccSetsSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/AccSetsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/AccSetsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  FileFormats/LSTS_File/LSTS_Sections/otfvi.hh
+FileFormats/LSTS_File/LSTS_Sections/AccSetsChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/AccSetsChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/AccSetsChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/AccSetsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/LSTS_File/LSTS_Sections/LayoutSection.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/LayoutSection.cc \
+  FileFormats/LSTS_File/LSTS_Sections/LayoutSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/LayoutAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/LSTS_File/LSTS_Sections/LayoutChecker.o:  \
+ FileFormats/LSTS_File/LSTS_Sections/LayoutChecker.cc \
+  FileFormats/LSTS_File/LSTS_Sections/LayoutChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/LayoutAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/FileFormat.hh
+FileFormats/LSTS_File/DivBitsAP.o: FileFormats/LSTS_File/DivBitsAP.cc \
+  FileFormats/LSTS_File/DivBitsAP.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/AccSetsAP.o: FileFormats/LSTS_File/AccSetsAP.cc \
+  FileFormats/LSTS_File/AccSetsAP.hh FileFormats/LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/StatePropsAP.o:  \
+ FileFormats/LSTS_File/StatePropsAP.cc \
+  FileFormats/LSTS_File/StatePropsAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ./FrameWork/error_handling.hh
+FileFormats/LSTS_File/ActionNamesAP.o:  \
+ FileFormats/LSTS_File/ActionNamesAP.cc \
+  FileFormats/LSTS_File/ActionNamesAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh
+FileFormats/LSTS_File/StateNamesAP.o:  \
+ FileFormats/LSTS_File/StateNamesAP.cc \
+  FileFormats/LSTS_File/StateNamesAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/TransitionsAP.o:  \
+ FileFormats/LSTS_File/TransitionsAP.cc \
+  FileFormats/LSTS_File/TransitionsAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/LayoutAP.o: FileFormats/LSTS_File/LayoutAP.cc \
+  FileFormats/LSTS_File/LayoutAP.hh FileFormats/LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/SectionAP.o: FileFormats/LSTS_File/SectionAP.cc \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/Header.o: FileFormats/LSTS_File/Header.cc \
+  FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh ./FrameWork/error_handling.hh \
+  ./FileFormats/FileFormat/Lexical/charconv.hh
+FileFormats/LSTS_File/AccSetsStore.o:  \
+ FileFormats/LSTS_File/AccSetsStore.cc \
+  FileFormats/LSTS_File/AccSetsStore.hh \
+  FileFormats/LSTS_File/AccSetsAP.hh FileFormats/LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/renumber.hh ./FrameWork/error_handling.hh
+FileFormats/LSTS_File/ActionNamesStore.o:  \
+ FileFormats/LSTS_File/ActionNamesStore.cc \
+  FileFormats/LSTS_File/ActionNamesStore.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  ./FileFormats/FileFormat/Forwarder.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/Exceptions.hh ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FrameWork/StringTree/StringMap.hh
+FileFormats/LSTS_File/DivBitsStore.o:  \
+ FileFormats/LSTS_File/DivBitsStore.cc \
+  FileFormats/LSTS_File/DivBitsStore.hh \
+  FileFormats/LSTS_File/DivBitsAP.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/renumber.hh ./FrameWork/error_handling.hh \
+  FileFormats/LSTS_File/removeDuplicates.hh
+FileFormats/LSTS_File/StateNamesStore.o:  \
+ FileFormats/LSTS_File/StateNamesStore.cc \
+  FileFormats/LSTS_File/StateNamesStore.hh \
+  FileFormats/LSTS_File/StateNamesAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/renumber.hh ./FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh
+FileFormats/LSTS_File/TransitionsStore.o:  \
+ FileFormats/LSTS_File/TransitionsStore.cc \
+  FileFormats/LSTS_File/TransitionsStore.hh \
+  FileFormats/LSTS_File/TransitionsAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/renumber.hh ./FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/LSTS_File/removeDuplicates.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/StatePropsStore.o:  \
+ FileFormats/LSTS_File/StatePropsStore.cc \
+  FileFormats/LSTS_File/StatePropsStore.hh \
+  FileFormats/LSTS_File/StatePropsAP.hh \
+  FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/renumber.hh ./FrameWork/error_handling.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/removeDuplicates.hh ./FrameWork/config.hh
+FileFormats/LSTS_File/iLSTS_File.o: FileFormats/LSTS_File/iLSTS_File.cc \
+  FileFormats/LSTS_File/iLSTS_File.hh ./FileFormats/LSTS_File/LstsFile.hh \
+  ./FileFormats/FileFormat/scFileFormat.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/LSTSiAPpredecs.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  FileFormats/LSTS_File/LSTS_Sections/HeaderSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/LSTS_Sections/HistorySection.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LSTS_Sections.hh \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/StringTree/StringMap.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StateNamesSection.hh \
+  ./FileFormats/LSTS_File/StateNamesAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StatePropsSection.hh \
+  ./FileFormats/LSTS_File/StatePropsAP.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Checker.hh ./FileFormats/Exceptions.hh \
+  FileFormats/LSTS_File/LSTS_Sections/DivBitsSection.hh \
+  ./FileFormats/LSTS_File/DivBitsAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/AccSetsSection.hh \
+  ./FileFormats/LSTS_File/AccSetsAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ./FileFormats/LSTS_File/TransitionsAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LayoutSection.hh \
+  ./FileFormats/LSTS_File/LayoutAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LSTS_Checkers.hh \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.hh \
+  ./FrameWork/StringTree/StringMap.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StateNamesChecker.hh \
+  ./FrameWork/StringTree/StringSet.hh \
+  FileFormats/LSTS_File/LSTS_Sections/DivBitsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/AccSetsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StatePropsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/TransitionsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LayoutChecker.hh \
+  FileFormats/LSTS_File/oLSTS_File.hh \
+  ./FileFormats/LSTS_File/LSTSoAPpredecs.hh
+FileFormats/LSTS_File/oLSTS_File.o: FileFormats/LSTS_File/oLSTS_File.cc \
+  FileFormats/LSTS_File/oLSTS_File.hh ./FileFormats/LSTS_File/LstsFile.hh \
+  ./FileFormats/FileFormat/scFileFormat.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/LSTSoAPpredecs.hh \
+  FileFormats/LSTS_File/LSTS_Sections/HeaderSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh ./FrameWork/config.hh \
+  FileFormats/LSTS_File/LSTS_Sections/HistorySection.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LSTS_Sections.hh \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StateNamesSection.hh \
+  ./FileFormats/LSTS_File/StateNamesAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StatePropsSection.hh \
+  ./FileFormats/LSTS_File/StatePropsAP.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  FileFormats/LSTS_File/LSTS_Sections/Interval.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Checker.hh ./FileFormats/Exceptions.hh \
+  FileFormats/LSTS_File/LSTS_Sections/DivBitsSection.hh \
+  ./FileFormats/LSTS_File/DivBitsAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/AccSetsSection.hh \
+  ./FileFormats/LSTS_File/AccSetsAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ./FileFormats/LSTS_File/TransitionsAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LayoutSection.hh \
+  ./FileFormats/LSTS_File/LayoutAP.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LSTS_Checkers.hh \
+  FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.hh \
+  ./FrameWork/StringTree/StringMap.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StateNamesChecker.hh \
+  ./FrameWork/StringTree/StringSet.hh \
+  FileFormats/LSTS_File/LSTS_Sections/DivBitsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/AccSetsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/StatePropsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/TransitionsChecker.hh \
+  FileFormats/LSTS_File/LSTS_Sections/LayoutChecker.hh
+FileFormats/LSTS_File/LstsFile.o: FileFormats/LSTS_File/LstsFile.cc \
+  FileFormats/LSTS_File/LstsFile.hh \
+  ./FileFormats/FileFormat/scFileFormat.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Checker.hh ./FileFormats/Exceptions.hh \
+  ./FileFormats/FileFormat/Lexical/charconv.hh
+FileFormats/ParRulesFile/ParComponentsAP.o:  \
+ FileFormats/ParRulesFile/ParComponentsAP.cc \
+  FileFormats/ParRulesFile/ParComponentsAP.hh \
+  FileFormats/ParRulesFile/../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/ParRulesFile/RulesAP.o: FileFormats/ParRulesFile/RulesAP.cc \
+  FileFormats/ParRulesFile/RulesAP.hh \
+  FileFormats/ParRulesFile/../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/ParRulesFile/StatePropRulesAP.o:  \
+ FileFormats/ParRulesFile/StatePropRulesAP.cc \
+  FileFormats/ParRulesFile/StatePropRulesAP.hh \
+  FileFormats/ParRulesFile/../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh
+FileFormats/ParRulesFile/StatePropRulesStore.o:  \
+ FileFormats/ParRulesFile/StatePropRulesStore.cc \
+  FileFormats/ParRulesFile/StatePropRulesStore.hh \
+  FileFormats/ParRulesFile/StatePropRulesAP.hh \
+  FileFormats/ParRulesFile/../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh
+FileFormats/ParRulesFile/ParRulesSections/ParComponentsSection.o:  \
+ FileFormats/ParRulesFile/ParRulesSections/ParComponentsSection.cc \
+  FileFormats/ParRulesFile/ParRulesSections/ParComponentsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../ParComponentsAP.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/ParRulesFile/ParRulesSections/RulesSection.o:  \
+ FileFormats/ParRulesFile/ParRulesSections/RulesSection.cc \
+  FileFormats/ParRulesFile/ParRulesSections/RulesSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../RulesAP.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FrameWork/error_handling.hh
+FileFormats/ParRulesFile/ParRulesSections/StatePropRulesSection.o:  \
+ FileFormats/ParRulesFile/ParRulesSections/StatePropRulesSection.cc \
+  FileFormats/ParRulesFile/ParRulesSections/StatePropRulesSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../StatePropRulesAP.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FileFormats/ParRulesFile/ParRulesFile.o:  \
+ FileFormats/ParRulesFile/ParRulesFile.cc \
+  FileFormats/ParRulesFile/ParRulesFile.hh \
+  ./FileFormats/FileFormat/scFileFormat.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/HeaderSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh ./FrameWork/config.hh \
+  FileFormats/ParRulesFile/ParRulesSections/ParComponentsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../ParComponentsAP.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../../LSTS_File/SectionAP.hh \
+  ./FrameWork/InOutStream.hh \
+  FileFormats/ParRulesFile/ParRulesSections/RulesSection.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../RulesAP.hh \
+  FileFormats/ParRulesFile/ParRulesSections/StatePropRulesSection.hh \
+  FileFormats/ParRulesFile/ParRulesSections/../StatePropRulesAP.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/ActionNamesSection.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/ActionNamesChecker.hh \
+  ./FileFormats/FileFormat/Checker.hh ./FileFormats/Exceptions.hh \
+  ./FrameWork/StringTree/StringMap.hh \
+  ./FileFormats/FileFormat/Lexical/charconv.hh
+FrameWork/CommandLineParser.o: FrameWork/CommandLineParser.cc \
+  FrameWork/CommandLineParser.hh FrameWork/error_handling.hh
+FrameWork/InOutStream.o: FrameWork/InOutStream.cc \
+  FrameWork/InOutStream.hh FrameWork/History.hh FrameWork/HistoryNode.hh \
+  FrameWork/config.hh FrameWork/error_handling.hh \
+  ./FileFormats/FileFormat/Lexical/charconv.hh
+FrameWork/TvtCLP.o: FrameWork/TvtCLP.cc FrameWork/TvtCLP.hh \
+  FrameWork/CommandLineParser.hh FrameWork/InOutStream.hh \
+  FrameWork/History.hh FrameWork/HistoryNode.hh FrameWork/config.hh \
+  FrameWork/LogWrite.hh FrameWork/error_handling.hh
+FrameWork/LogWrite.o: FrameWork/LogWrite.cc FrameWork/LogWrite.hh \
+  FrameWork/config.hh FrameWork/error_handling.hh
+FrameWork/History.o: FrameWork/History.cc FrameWork/History.hh \
+  FrameWork/HistoryNode.hh FrameWork/config.hh \
+  FrameWork/error_handling.hh
+FrameWork/HistoryNode.o: FrameWork/HistoryNode.cc \
+  FrameWork/HistoryNode.hh FrameWork/config.hh FrameWork/History.hh
+FrameWork/DRand48.o: FrameWork/DRand48.cc
+FrameWork/fwimpl.o: FrameWork/fwimpl.cc FrameWork/Memory.hh \
+  FrameWork/error_handling.hh FrameWork/MemoryStack.hh \
+  FrameWork/TVTvec.hh ./FrameWork/TVTvec.hh
+FrameWork/StringTree/CharArray.o: FrameWork/StringTree/CharArray.cc \
+  FrameWork/StringTree/CharArray.hh
+FrameWork/StringTree/StringSet.o: FrameWork/StringTree/StringSet.cc \
+  FrameWork/StringTree/StringSet.hh FrameWork/StringTree/CoilArray.hh \
+  FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  FrameWork/StringTree/CharArray.hh
+FrameWork/InputLSTSContainer.o: FrameWork/InputLSTSContainer.cc \
+  FrameWork/InputLSTSContainer.hh ./FileFormats/LSTS_File/iLSTS_File.hh \
+  ./FileFormats/LSTS_File/LstsFile.hh \
+  ./FileFormats/FileFormat/scFileFormat.hh \
+  ./FileFormats/FileFormat/FileFormat.hh \
+  ./FileFormats/FileFormat/Lexical/ITokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FrameWork/History.hh \
+  ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/Token.hh \
+  ./FileFormats/FileFormat/Lexical/ITS_scripting.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Forwarder.hh ./FileFormats/LSTS_File/Header.hh \
+  ./FrameWork/config.hh ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/LSTSiAPpredecs.hh \
+  ./FrameWork/StringTree/StringMap.hh ./FrameWork/StringTree/StringSet.hh \
+  ./FrameWork/StringTree/CoilArray.hh \
+  ./FrameWork/StringTree/iCoilArray.hh \
+  ./FrameWork/StringTree/static_vector.hh ./FrameWork/StringTree/debug.hh \
+  ./FrameWork/StringTree/CharArray.hh \
+  ./FileFormats/LSTS_File/TransitionsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FileFormats/LSTS_File/DivBitsAP.hh \
+  ./FileFormats/LSTS_File/ActionNamesStore.hh \
+  ./FileFormats/LSTS_File/ActionNamesAP.hh \
+  ./FileFormats/FileFormat/Forwarder.hh FrameWork/AccSets.hh \
+  FrameWork/BitVector.hh FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/AccSetsAP.hh ./FileFormats/LSTS_File/Header.hh \
+  FrameWork/RO_AccSets.hh FrameWork/StateProps.hh \
+  ./FileFormats/LSTS_File/StatePropsAP.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh
+FrameWork/StateProps.o: FrameWork/StateProps.cc FrameWork/StateProps.hh \
+  FrameWork/BitVector.hh FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/StatePropsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/specialStateProps.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh
+FrameWork/RO_AccSets.o: FrameWork/RO_AccSets.cc FrameWork/RO_AccSets.hh \
+  FrameWork/AccSets.hh FrameWork/BitVector.hh FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/AccSetsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh
+FrameWork/AccSets.o: FrameWork/AccSets.cc FrameWork/AccSets.hh \
+  FrameWork/BitVector.hh FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/AccSetsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh
+FrameWork/TransitionsContainer.o: FrameWork/TransitionsContainer.cc \
+  FrameWork/TransitionsContainer.hh FrameWork/MemoryStack.hh \
+  FrameWork/TVTvec.hh ./FileFormats/LSTS_File/TransitionsAP.hh \
+  ./FileFormats/LSTS_File/SectionAP.hh ./FrameWork/InOutStream.hh \
+  ./FrameWork/History.hh ./FrameWork/HistoryNode.hh ./FrameWork/config.hh \
+  ./FileFormats/LSTS_File/Header.hh ./FrameWork/config.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/TokenStream.hh \
+  ./FileFormats/FileFormat/Lexical/constants.hh ./FrameWork/config.hh \
+  ./FrameWork/InOutStream.hh ./FileFormats/FileFormat/Lexical/Token.hh \
+  FrameWork/error_handling.hh \
+  ./FileFormats/LSTS_File/LSTS_Sections/TransitionsSection.hh \
+  ./FileFormats/FileFormat/Section.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh \
+  ./FileFormats/LSTS_File/TransitionsAP.hh \
+  ./FileFormats/FileFormat/Lexical/OTokenStream.hh
+FrameWork/error_handling.o: FrameWork/error_handling.cc \
+  FrameWork/LogWrite.hh FrameWork/config.hh
+ff/icstream.o: ff/icstream.cc ff/icstream.hh
+ff/its_base.o: ff/its_base.cc ff/its_base.hh ff/icstream.hh ff/gen.hh
+ff/itstream.o: ff/itstream.cc ff/itstream.hh ff/icstream.hh \
+  ff/its_base.hh ff/gen.hh

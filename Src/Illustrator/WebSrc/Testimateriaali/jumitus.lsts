@@ -1,0 +1,42 @@
+Lsts_file
+
+Begin History
+
+ 1.1
+ "t.lsts"
+ "17.05.2001 14:10 tvt.fftool -f --tvt t.ltn t.lsts"
+ "Input file type: ara, output file type: tvt."
+ "Reading and processing took less than 5 sec."
+
+ 1
+ "t.ltn"
+
+End History
+
+Begin Header
+
+ State_cnt = 4
+ Transition_cnt = 6
+ Action_cnt = 3
+ Initial_state = 1
+
+End Header
+
+Begin Action_names
+
+## 0 = "tau"
+ 1 = "setnext!2:INT"
+ 2 = "setnext!3:INT"
+ 3 = "setnext!1:INT"
+
+End Action_names
+
+Begin Transitions
+
+ 1 2 1 3 0;
+ 2 3 0 4 2;
+ 4 1 3 3 0;
+
+End Transitions
+
+End_lsts
