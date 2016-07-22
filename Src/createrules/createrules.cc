@@ -20,11 +20,13 @@ Contributor(s): Juha Nieminen.
 
 #include "LSTS_File/iLSTS_File.hh"
 #include "LSTS_File/ActionNamesAP.hh"
+#include "LSTS_File/StatePropsAP.hh"
 #include "FileFormat/Lexical/ITokenStream.hh"
 
 #include "ParRulesFile/ParRulesFile.hh"
 #include "ParRulesFile/ParComponentsAP.hh"
 #include "ParRulesFile/RulesAP.hh"
+#include "ParRulesFile/StatePropRulesAP.hh"
 #include "error_handling.hh"
 
 #ifndef MAKEDEPEND
@@ -32,6 +34,7 @@ Contributor(s): Juha Nieminen.
 #include <string>
 #include <map>
 #include <set>
+#include <sstream>
 using namespace std;
 #endif
 
@@ -81,6 +84,86 @@ private:
 
 
 //========================================================================
+// LSTS-reading (reads state proposition names from LSTS-file to the
+// given data structure)
+// ========================================================================
+
+class StatePropositionNamesReading: public iStatePropsAP, public oStatePropRulesAP
+{
+public:
+  typedef map<string, lsts_index_t> CompanionContainer;
+
+public:
+  inline StatePropositionNamesReading():
+    current_lsts(0)
+  { }
+
+private:
+  CompanionContainer statePropositionMap;
+  lsts_index_t current_lsts;
+
+public:
+
+  void start_PropositionsFromLSTS( lsts_index_t idx )
+  {
+    /*check_claim( 0 == current_lsts,
+      string("Proposition names reading: internal error: recursion"));*/
+    current_lsts = idx ;
+  }
+  void end_PropositionsFromLSTS( lsts_index_t idx )
+  {
+    check_claim( idx == current_lsts,
+		 string("Proposition names reading: internal error: mismatch"));
+    current_lsts = 0;
+  }
+
+  void lsts_StartStateProps( class Header& )
+  { }
+
+  void lsts_StartPropStates( const std::string& prop_name )
+  {
+    CompanionContainer::iterator old( statePropositionMap.find(prop_name));
+    check_claim( statePropositionMap.end() == old || old->second == current_lsts,
+		 string("Proposition names reading: Multiple LSTSs define '")
+		 + prop_name + "'");
+    if ( statePropositionMap.end() == old )
+      {
+	statePropositionMap[prop_name] = current_lsts;
+      }
+  }
+
+  void lsts_PropState( lsts_index_t )
+  { }
+
+  void lsts_EndPropStates( const std::string& )
+  { }
+
+  void lsts_EndStateProps()
+  { }
+
+public:
+  bool lsts_doWeWriteStatePropRules()
+  {
+    return (statePropositionMap.size() > 0);
+  }
+  
+  void lsts_WriteStatePropRules( iStatePropRulesAP& writer )
+  {
+    for ( CompanionContainer::iterator ptr=statePropositionMap.begin() ;
+	  statePropositionMap.end() != ptr ;
+	  ++ptr )
+      {
+	lsts_index_t component(ptr->second);
+	string proposition_name(ptr->first);
+	ostringstream result;
+	result << component << ".\""<< proposition_name
+	       << "\"->\"" << proposition_name << "\"";
+	writer.lsts_StatePropRule(result.str());
+      }
+  }
+};
+
+//========================================================================
 // Pattern searching function
 // Looks if any item in 'regExprs' matches 'name' and returns iterator to
 // the matching element or to end() if nothing matches
@@ -126,7 +209,8 @@ public:
     inline WriteRules(CreateRulesCLP& clparser,
                       const vector<map<string, lsts_index_t> >& aNames,
                       const vector<RegExp>& hidActs,
-                      const vector<ActionRename>& renActs):
+                      const vector<ActionRename>& renActs,
+		      StatePropositionNamesReading &spn):
         clp(clparser),
         inputActionNames(aNames),
         hideActions(hidActs),
@@ -138,6 +222,11 @@ public:
         rules.AddParComponentsWriter(*this);
         rules.AddRulesWriter(*this);
         rules.AddActionNamesWriter(*this);
+	if( clp.propositions() )
+	  {
+	    // check_claim(false, "Not yet");
+	    rules.AddStatePropRulesWriter(spn);
+	  }
         rules.WriteFile(clp.getOutputStream(0));
     }
 
@@ -385,6 +474,7 @@ bool CreateRulesFile(CreateRulesCLP& clp)
     vector<map<string, lsts_index_t> > actionNames(clp.getFilenamesCnt()-1);
     vector<RegExp> hideActions;
     vector<ActionRename> renameActions;
+    StatePropositionNamesReading propos;
 
     if(clp.rename())
         ReadRenameActions(clp.getRenameFile(), hideActions, renameActions);
@@ -394,6 +484,11 @@ bool CreateRulesFile(CreateRulesCLP& clp)
         iLSTS_File is(clp.getInputStream(i));
         ActionNamesReading an(actionNames[i-1]);
         is.AddActionNamesReader(an);
+	if ( clp.propositions() )
+	  {
+	    propos.start_PropositionsFromLSTS(i);
+	    is.AddStatePropsReader(propos);
+	  }
         is.SetNoReaderAction(iLSTS_File::IGNORE);
         is.ReadFile();
     }
@@ -401,7 +496,7 @@ bool CreateRulesFile(CreateRulesCLP& clp)
     if( clp.visible() )
       InvertHideNames(hideActions, actionNames, renameActions);
 
-    WriteRules(clp, actionNames, hideActions, renameActions);
+    WriteRules(clp, actionNames, hideActions, renameActions, propos);
 
     return true;
 }

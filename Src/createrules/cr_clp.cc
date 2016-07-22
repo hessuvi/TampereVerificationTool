@@ -36,13 +36,19 @@ const char* const CreateRulesCLP::description =
 
 
 CreateRulesCLP::CreateRulesCLP():
-  TvtCLP(description), renameUsed(false), visibleFlavor(false)
+  TvtCLP(description), renameUsed(false), visibleFlavor(false),
+  copyPropositions(false)
 {
+    setOptionHandler("-propositions", &CreateRulesCLP::propositionsHandler, true,
+                     "Copy propositions from the inputs to the output, if unique. "
+		     "Only normal propositions are supported");
+
     setOptionHandler("-visible", &CreateRulesCLP::visibleHandler, true,
                      "Specify action visibility/renaming file. "
                      "                  " // KLUDGE!
                      "Write \"--help rename\" for more help.",
                      "<file>", true);
+
     setOptionHandler("-rename", &CreateRulesCLP::renameHandler, true,
                      "Specify action hiding/renaming file. "
                      "                  " // KLUDGE!
@@ -59,7 +65,14 @@ CreateRulesCLP::CreateRulesCLP():
 
 bool CreateRulesCLP::rename() { return renameUsed; }
 bool CreateRulesCLP::visible() { return visibleFlavor; }
+bool CreateRulesCLP::propositions() { return copyPropositions; }
 InStream& CreateRulesCLP::getRenameFile() { return renameFile; }
+
+bool CreateRulesCLP::propositionsHandler(const std::string&)
+{
+  copyPropositions = true;
+  return true;
+}
 
 bool CreateRulesCLP::visibleHandler(const string& param)
 {

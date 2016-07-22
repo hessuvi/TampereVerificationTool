@@ -39,6 +39,7 @@ public:
 
   bool rename();
   bool visible();
+  bool propositions();
 
   InStream& getRenameFile();
 
@@ -48,6 +49,7 @@ public:
  private:
     bool renameHandler(const std::string& param);
     bool visibleHandler(const std::string& param);
+    bool propositionsHandler(const std::string&);
 
 #ifndef NO_REGEXP
     bool useereHandler(const std::string&);
@@ -55,6 +57,7 @@ public:
 
   bool renameUsed;
   bool visibleFlavor;
+  bool copyPropositions;
   InStream renameFile;
 
   static const char* const description;
